@@ -18,6 +18,7 @@ I would like to acknowledge, in addition to @tonesto7, those whom he found helpf
 * @sibartlett [homebridge-wink3](https://github.com/sibartlett/homebridge-wink3)
 * @danTapps   [homebridge-hubconnect-hubitat](https://github.com/danTapps/homebridge-hubitat-hubconnect)
 
+
 ... As well as those with knowledge regarding the Vera UI7 API:
 
 * @Be2daErtin [homebridge-bvera](https://github.com/Be2daErtin/homebridge-bvera)
