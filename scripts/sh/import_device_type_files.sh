@@ -34,5 +34,5 @@ do
   xml2js -a -ns "${file}" |
   jq --indent 2 --arg "device_type" "${file_base}" -f "$device_type_jq" |
    "${activate_json_comments}" |
-    "${json_type_to_js_module}"  >  "${VERA_DEV_TYPE_DIR}/${file_base}.js"
+    "${json_type_to_js_module}"  >  "${VERA_DEV_TYPE_DIR}/${file_base#D_}.js"
 done
