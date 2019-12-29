@@ -1,13 +1,12 @@
 # jq script transforms json equivalent of vera service file 'S_Blah.xml' to service_type file with no exposed services
 # the input is produced by xml2js -a -ns
 
-def comment_out(node): [{ "/*": ""}] + node + [{"*/": ""}];
 def insure_array(node): node | if type == "array" then . else [.] end;
 def convert_eventable(node): node | if . == "yes" then true else false end;
 
 .scpd | {
   serviceType: $service_type,
-  variables:
+  stateVariables:
     .serviceStateTable
     # guarantee value returned for 'stateVariable'
     | (. | if type == "object" and has("stateVariable") then insure_array(.stateVariable) else [] end)
@@ -39,7 +38,6 @@ def convert_eventable(node): node | if . == "yes" then true else false end;
           )
         }
     )
-    | comment_out(.)
     | add,
   actions:
     .actionList
@@ -97,6 +95,5 @@ def convert_eventable(node): node | if . == "yes" then true else false end;
           )
         }
     )
-    | comment_out(.)
     | add
 }

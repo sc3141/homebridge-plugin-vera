@@ -7,12 +7,13 @@ USAGE="${SCRIPTNAME} (file | dir)"
 SH_SCRIPT_DIR="$(dirname "$(realpath "${0}")")"
 SCRIPT_DIR="$(dirname $SH_SCRIPT_DIR)"
 JQ_SCRIPT_DIR="${SCRIPT_DIR}/jq"
+NODE_SCRIPT_DIR="${SCRIPT_DIR}/node"
 REPO_DIR="$(dirname "${SCRIPT_DIR}")"
-VERA_DEV_TYPE_DIR="${REPO_DIR}/src/device_types"
+VERA_DEV_TYPE_DIR="${REPO_DIR}/src/luup_devices"
 
+snakecase=${SH_SCRIPT_DIR}/snakecase.sh
 device_type_jq=${JQ_SCRIPT_DIR}/device_type.jq
-activate_json_comments=${SH_SCRIPT_DIR}/activate_json_comments.sh
-json_type_to_js_module=${SH_SCRIPT_DIR}/json_type_to_js_module.sh
+device_json_to_module=${NODE_SCRIPT_DIR}/device_json_to_module.js
 
 if [[ $# -lt 1 ]]
 then
@@ -30,9 +31,10 @@ for file in ${src}
 do
   echo "${file} ..."
 
-  file_base="$(basename "${file}" ".xml")"
+  file_base="$(basename "${file}" ".xml" | sed 's/^D_//' | "${snakecase}")"
+  filename="${VERA_DEV_TYPE_DIR}/${file_base}.js"
+
   xml2js -a -ns "${file}" |
-  jq --indent 2 --arg "device_type" "${file_base}" -f "$device_type_jq" |
-   "${activate_json_comments}" |
-    "${json_type_to_js_module}"  >  "${VERA_DEV_TYPE_DIR}/${file_base#D_}.js"
+  jq -L "${JQ_SCRIPT_DIR}" --indent 2 --arg "device_type" "${file_base}" -f "$device_type_jq" |
+  node "${device_json_to_module}" >  "${filename}"
 done
