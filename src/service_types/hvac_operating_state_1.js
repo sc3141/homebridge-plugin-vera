@@ -1,12 +1,10 @@
 module.exports = {
-  "serviceType": "S_HVAC_OperatingState1",
-  "variables": {
-    /*
-    "ModeState": {
-      "dataType": "string",
-      "defVal": "Off",
-      "shortCode": "hvacstate",
-      "enumeration": [
+  serviceType: "hvac_operating_state_1",
+  variables: {
+    ModeState: {
+      dataType: string,
+      defVal: "Off",
+      values: [
         "Idle",
         "Heating",
         "Cooling",
@@ -14,12 +12,8 @@ module.exports = {
         "PendingHeat",
         "PendingCool",
         "Vent"
-      ]
-    },
-    */
-  },
-  "actions": {
-    /*
-    */
-  }
-};
+      ],
+      shortCode: hvacstate
+    }
+  }};
+

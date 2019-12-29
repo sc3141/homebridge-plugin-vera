@@ -1,148 +1,101 @@
 module.exports = {
-  "serviceType": "S_DigitalSecurityCameraSettings1",
-  "variables": {
-    /*
-    "AutomaticWhiteBalance": {
-      "eventable": true,
-      "dataType": "boolean",
-      "defVal": 1
+  serviceType: "digital_security_camera_settings_1",
+  variables: {
+    AutomaticWhiteBalance: {
+      dataType: boolean,
+      defVal: 1,
+      eventable: true
     },
-    "FixedWhiteBalance": {
-      "eventable": true,
-      "dataType": "ui4",
-      "defVal": 3000,
-      "min": 0,
-      "max": 10000
+    FixedWhiteBalance: {
+      dataType: ui4,
+      defVal: 3000,
+      min: 0,
+      max: 10000,
+      eventable: true
     },
-    "AvailableRotations": {
-      "eventable": false,
-      "dataType": "string"
+    AvailableRotations: {
+      dataType: string,
+      eventable: false
     },
-    "DefaultRotation": {
-      "eventable": true,
-      "dataType": "string"
+    DefaultRotation: {
+      dataType: string,
+      eventable: true
     },
-    "Brightness": {
-      "eventable": true,
-      "dataType": "ui1",
-      "defVal": 50,
-      "min": 0,
-      "max": 100
+    Brightness: {
+      dataType: ui1,
+      defVal: 50,
+      min: 0,
+      max: 100,
+      eventable: true
     },
-    "ColorSaturation": {
-      "eventable": true,
-      "dataType": "ui1",
-      "defVal": 50,
-      "min": 0,
-      "max": 100
-    },
-    */
+    ColorSaturation: {
+      dataType: ui1,
+      defVal: 50,
+      min: 0,
+      max: 100,
+      eventable: true
+    }
   },
-  "actions": {
-    /*
-    "SetAutomaticWhiteBalance": {
-      "args": {
-        "in": {
-          "NewAutomaticWhiteBalance": {
-            "var": "AutomaticWhiteBalance"
-          }
-        }
+  actions: {
+    SetAutomaticWhiteBalance: {
+      in: {
+        NewAutomaticWhiteBalance: "AutomaticWhiteBalance"
       }
     },
-    "GetAutomaticWhiteBalance": {
-      "args": {
-        "out": {
-          "RetAutomaticWhiteBalance": {
-            "var": "AutomaticWhiteBalance"
-          }
-        }
+    GetAutomaticWhiteBalance: {
+      out: {
+        RetAutomaticWhiteBalance: "AutomaticWhiteBalance"
       }
     },
-    "SetFixedWhiteBalance": {
-      "args": {
-        "in": {
-          "NewFixedWhiteBalance": {
-            "var": "FixedWhiteBalance"
-          }
-        }
+    SetFixedWhiteBalance: {
+      in: {
+        NewFixedWhiteBalance: "FixedWhiteBalance"
       }
     },
-    "GetFixedWhiteBalance": {
-      "args": {
-        "out": {
-          "RetFixedWhiteBalance": {
-            "var": "FixedWhiteBalance"
-          }
-        }
+    GetFixedWhiteBalance: {
+      out: {
+        RetFixedWhiteBalance: "FixedWhiteBalance"
       }
     },
-    "GetAvailableRotations": {
-      "args": {
-        "out": {
-          "RetAvailableRotations": {
-            "var": "AvailableRotations"
-          }
-        }
+    GetAvailableRotations: {
+      out: {
+        RetAvailableRotations: "AvailableRotations"
       }
     },
-    "SetDefaultRotation": {
-      "args": {
-        "in": {
-          "NewRotation": {
-            "var": "DefaultRotation"
-          }
-        }
+    SetDefaultRotation: {
+      in: {
+        NewRotation: "DefaultRotation"
       }
     },
-    "GetDefaultRotation": {
-      "args": {
-        "out": {
-          "RetRotation": {
-            "var": "DefaultRotation"
-          }
-        }
+    GetDefaultRotation: {
+      out: {
+        RetRotation: "DefaultRotation"
       }
     },
-    "SetBrightness": {
-      "args": {
-        "in": {
-          "NewBrightness": {
-            "var": "Brightness"
-          }
-        }
+    SetBrightness: {
+      in: {
+        NewBrightness: "Brightness"
       }
     },
-    "GetBrightness": {
-      "args": {
-        "out": {
-          "RetBrightness": {
-            "var": "Brightness"
-          }
-        }
+    GetBrightness: {
+      out: {
+        RetBrightness: "Brightness"
       }
     },
-    "IncreaseBrightness": {},
-    "DecreaseBrightness": {},
-    "SetColorSaturation": {
-      "args": {
-        "in": {
-          "NewColorSaturation": {
-            "var": "ColorSaturation"
-          }
-        }
+    IncreaseBrightness: {},
+    DecreaseBrightness: {},
+    SetColorSaturation: {
+      in: {
+        NewColorSaturation: "ColorSaturation"
       }
     },
-    "GetColorSaturation": {
-      "args": {
-        "out": {
-          "RetColorSaturation": {
-            "var": "ColorSaturation"
-          }
-        }
+    GetColorSaturation: {
+      out: {
+        RetColorSaturation: "ColorSaturation"
       }
     },
-    "IncreaseColorSaturation": {},
-    "DecreaseColorSaturation": {},
-    */
+    IncreaseColorSaturation: {},
+    DecreaseColorSaturation: {}
   }
 };
+

@@ -1,12 +1,7 @@
 module.exports = {
-  "serviceType": "S_VideoAdjustment1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "Wide": {},
-    */
+  serviceType: "video_adjustment_1",
+  actions: {
+    Wide: {}
   }
 };
+

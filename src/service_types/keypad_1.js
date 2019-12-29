@@ -1,10 +1,6 @@
 module.exports = {
-  serviceType: "door_lock_1",
+  serviceType: "keypad_1",
   variables: {
-    Target: {
-      dataType: boolean,
-      eventable: false
-    },
     Status: {
       dataType: boolean,
       shortCode: locked
@@ -31,18 +27,6 @@ module.exports = {
     sl_UnauthUser: {
       dataType: string
     },
-    sl_PinProgramSuccess: {
-      dataType: string
-    },
-    sl_PinRemoveSuccess: {
-      dataType: string
-    },
-    sl_PinProgramFail: {
-      dataType: string
-    },
-    sl_LockChanged: {
-      dataType: string
-    },
     sl_LowBattery: {
       dataType: boolean
     },
@@ -60,11 +44,6 @@ module.exports = {
     }
   },
   actions: {
-    SetTarget: {
-      in: {
-        newTargetValue: "Target"
-      }
-    },
     SetPin: {
       out: {
         json: "PinCodes",
@@ -103,12 +82,6 @@ module.exports = {
     ClearPin: {
       in: {
         UserCode: "sl_UserCode"
-      }
-    },
-    RenamePin: {
-      in: {
-        UserCode: "sl_UserCode",
-        UserCodeName: "sl_UserCode"
       }
     }
   }

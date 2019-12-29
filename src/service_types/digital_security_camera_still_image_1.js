@@ -1,178 +1,111 @@
 module.exports = {
-  "serviceType": "S_DigitalSecurityCameraStillImage1",
-  "variables": {
-    /*
-    "AvailableEncodings": {
-      "eventable": false,
-      "dataType": "string"
+  serviceType: "digital_security_camera_still_image_1",
+  variables: {
+    AvailableEncodings: {
+      dataType: string,
+      eventable: false
     },
-    "DefaultEncoding": {
-      "eventable": true,
-      "dataType": "string"
+    DefaultEncoding: {
+      dataType: string,
+      eventable: true
     },
-    "AvailableCompressionLevels": {
-      "eventable": false,
-      "dataType": "string"
+    AvailableCompressionLevels: {
+      dataType: string,
+      eventable: false
     },
-    "DefaultCompressionLevel": {
-      "eventable": true,
-      "dataType": "string"
+    DefaultCompressionLevel: {
+      dataType: string,
+      eventable: true
     },
-    "AvailableResolutions": {
-      "eventable": false,
-      "dataType": "string"
+    AvailableResolutions: {
+      dataType: string,
+      eventable: false
     },
-    "DefaultResolution": {
-      "eventable": true,
-      "dataType": "string"
+    DefaultResolution: {
+      dataType: string,
+      eventable: true
     },
-    "ImageURL": {
-      "eventable": false,
-      "dataType": "string"
+    ImageURL: {
+      dataType: string,
+      eventable: false
     },
-    "ImagePresentationURL": {
-      "eventable": false,
-      "dataType": "string"
-    },
-    */
+    ImagePresentationURL: {
+      dataType: string,
+      eventable: false
+    }
   },
-  "actions": {
-    /*
-    "GetAvailableEncodings": {
-      "args": {
-        "out": {
-          "RetAvailableEncodings": {
-            "var": "AvailableEncodings"
-          }
-        }
+  actions: {
+    GetAvailableEncodings: {
+      out: {
+        RetAvailableEncodings: "AvailableEncodings"
       }
     },
-    "GetDefaultEncoding": {
-      "args": {
-        "out": {
-          "RetEncoding": {
-            "var": "DefaultEncoding"
-          }
-        }
+    GetDefaultEncoding: {
+      out: {
+        RetEncoding: "DefaultEncoding"
       }
     },
-    "SetDefaultEncoding": {
-      "args": {
-        "in": {
-          "ReqEncoding": {
-            "var": "DefaultEncoding"
-          }
-        }
+    SetDefaultEncoding: {
+      in: {
+        ReqEncoding: "DefaultEncoding"
       }
     },
-    "GetAvailableCompressionLevels": {
-      "args": {
-        "out": {
-          "RetAvailableCompressionLevels": {
-            "var": "AvailableCompressionLevels"
-          }
-        }
+    GetAvailableCompressionLevels: {
+      out: {
+        RetAvailableCompressionLevels: "AvailableCompressionLevels"
       }
     },
-    "GetDefaultCompressionLevel": {
-      "args": {
-        "out": {
-          "RetCompressionLevel": {
-            "var": "DefaultCompressionLevel"
-          }
-        }
+    GetDefaultCompressionLevel: {
+      out: {
+        RetCompressionLevel: "DefaultCompressionLevel"
       }
     },
-    "SetDefaultCompressionLevel": {
-      "args": {
-        "in": {
-          "ReqCompressionLevel": {
-            "var": "DefaultCompressionLevel"
-          }
-        }
+    SetDefaultCompressionLevel: {
+      in: {
+        ReqCompressionLevel: "DefaultCompressionLevel"
       }
     },
-    "GetAvailableResolutions": {
-      "args": {
-        "out": {
-          "RetAvailableResolutions": {
-            "var": "AvailableResolutions"
-          }
-        }
+    GetAvailableResolutions: {
+      out: {
+        RetAvailableResolutions: "AvailableResolutions"
       }
     },
-    "GetDefaultResolution": {
-      "args": {
-        "out": {
-          "RetResolution": {
-            "var": "DefaultResolution"
-          }
-        }
+    GetDefaultResolution: {
+      out: {
+        RetResolution: "DefaultResolution"
       }
     },
-    "SetDefaultResolution": {
-      "args": {
-        "in": {
-          "ReqResolution": {
-            "var": "DefaultResolution"
-          }
-        }
+    SetDefaultResolution: {
+      in: {
+        ReqResolution: "DefaultResolution"
       }
     },
-    "GetImageURL": {
-      "args": {
-        "out": {
-          "ReqEncoding": {
-            "var": "DefaultEncoding"
-          },
-          "ReqCompression": {
-            "var": "DefaultCompressionLevel"
-          },
-          "ReqResolution": {
-            "var": "DefaultResolution"
-          },
-          "RetImageURL": {
-            "var": "ImageURL"
-          }
-        }
+    GetImageURL: {
+      out: {
+        ReqEncoding: "DefaultEncoding",
+        ReqCompression: "DefaultCompressionLevel",
+        ReqResolution: "DefaultResolution",
+        RetImageURL: "ImageURL"
       }
     },
-    "GetDefaultImageURL": {
-      "args": {
-        "out": {
-          "RetImageURL": {
-            "var": "ImageURL"
-          }
-        }
+    GetDefaultImageURL: {
+      out: {
+        RetImageURL: "ImageURL"
       }
     },
-    "GetImagePresentationURL": {
-      "args": {
-        "out": {
-          "ReqEncoding": {
-            "var": "DefaultEncoding"
-          },
-          "ReqCompression": {
-            "var": "DefaultCompressionLevel"
-          },
-          "ReqResolution": {
-            "var": "DefaultResolution"
-          },
-          "RetImagePresentationURL": {
-            "var": "ImagePresentationURL"
-          }
-        }
+    GetImagePresentationURL: {
+      out: {
+        ReqEncoding: "DefaultEncoding",
+        ReqCompression: "DefaultCompressionLevel",
+        ReqResolution: "DefaultResolution",
+        RetImagePresentationURL: "ImagePresentationURL"
       }
     },
-    "GetDefaultImagePresentationURL": {
-      "args": {
-        "out": {
-          "RetImagePresentationURL": {
-            "var": "ImagePresentationURL"
-          }
-        }
+    GetDefaultImagePresentationURL: {
+      out: {
+        RetImagePresentationURL: "ImagePresentationURL"
       }
-    },
-    */
+    }
   }
 };
+

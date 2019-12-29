@@ -1,16 +1,10 @@
 module.exports = {
-  "serviceType": "S_GenericSensor1",
-  "variables": {
-    /*
-    "CurrentLevel": {
-      "eventable": true,
-      "dataType": "i4",
-      "shortCode": "light"
-    },
-    */
-  },
-  "actions": {
-    /*
-    */
-  }
-};
+  serviceType: "generic_sensor_1",
+  variables: {
+    CurrentLevel: {
+      dataType: i4,
+      shortCode: light,
+      eventable: true
+    }
+  }};
+

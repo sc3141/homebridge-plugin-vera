@@ -1,45 +1,34 @@
 module.exports = {
-  "serviceType": "S_Protection1",
-  "variables": {
-    /*
-    "LocalProtectionStateTarget": {
-      "eventable": false,
-      "dataType": "string"
+  serviceType: "protection_1",
+  variables: {
+    LocalProtectionStateTarget: {
+      dataType: string,
+      eventable: false
     },
-    "LocalProtectionState": {
-      "eventable": false,
-      "dataType": "string"
+    LocalProtectionState: {
+      dataType: string,
+      eventable: false
     },
-    "RFProtectionStateTarget": {
-      "eventable": false,
-      "dataType": "string"
+    RFProtectionStateTarget: {
+      dataType: string,
+      eventable: false
     },
-    "RFProtectionState": {
-      "eventable": false,
-      "dataType": "string"
-    },
-    */
+    RFProtectionState: {
+      dataType: string,
+      eventable: false
+    }
   },
-  "actions": {
-    /*
-    "SetLocalProtectionState": {
-      "args": {
-        "in": {
-          "newTargetValue": {
-            "var": "LocalProtectionStateTarget"
-          }
-        }
+  actions: {
+    SetLocalProtectionState: {
+      in: {
+        newTargetValue: "LocalProtectionStateTarget"
       }
     },
-    "SetRFProtectionState": {
-      "args": {
-        "in": {
-          "newTargetValue": {
-            "var": "LocalProtectionStateTarget"
-          }
-        }
+    SetRFProtectionState: {
+      in: {
+        newTargetValue: "LocalProtectionStateTarget"
       }
-    },
-    */
+    }
   }
 };
+

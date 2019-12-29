@@ -1,68 +1,43 @@
 module.exports = {
-  "serviceType": "S_Schedule1",
-  "variables": {
-    /*
-    "Schedule": {
-      "dataType": "string"
+  serviceType: "schedule_1",
+  variables: {
+    Schedule: {
+      dataType: string
     },
-    "ScheduleBlockId": {
-      "dataType": "ui1"
+    ScheduleBlockId: {
+      dataType: ui1
     },
-    "ScheduleState": {
-      "dataType": "ui1"
+    ScheduleState: {
+      dataType: ui1
     },
-    "Duration": {
-      "dataType": "ui2"
+    Duration: {
+      dataType: ui2
     },
-    "ScheduleId": {
-      "dataType": "ui1"
-    },
-    */
+    ScheduleId: {
+      dataType: ui1
+    }
   },
-  "actions": {
-    /*
-    "SetSchedule": {
-      "args": {
-        "in": {
-          "ScheduleId": {
-            "var": "ScheduleId"
-          },
-          "ScheduleBlockId": {
-            "var": "ScheduleBlockId"
-          },
-          "Schedule": {
-            "var": "Schedule"
-          }
-        }
+  actions: {
+    SetSchedule: {
+      in: {
+        ScheduleId: "ScheduleId",
+        ScheduleBlockId: "ScheduleBlockId",
+        Schedule: "Schedule"
       }
     },
-    "RemoveSchedule": {
-      "args": {
-        "in": {
-          "ScheduleId": {
-            "var": "ScheduleId"
-          },
-          "ScheduleBlockId": {
-            "var": "ScheduleBlockId"
-          }
-        }
+    RemoveSchedule: {
+      in: {
+        ScheduleId: "ScheduleId",
+        ScheduleBlockId: "ScheduleBlockId"
       }
     },
-    "SetScheduleState": {
-      "args": {
-        "in": {
-          "ScheduleId": {
-            "var": "ScheduleId"
-          },
-          "ScheduleBlockId": {
-            "var": "ScheduleBlockId"
-          },
-          "ScheduleState": {
-            "var": "ScheduleState"
-          }
-        }
+    SetScheduleState: {
+      in: {
+        ScheduleId: "ScheduleId",
+        ScheduleBlockId: "ScheduleBlockId",
+        ScheduleState: "ScheduleState"
       }
-    },
-    */
+    }
   }
 };
+

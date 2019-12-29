@@ -1,99 +1,52 @@
 module.exports = {
-  "serviceType": "S_UleNetwork1",
-  "variables": {
-    /*
-    "Address": {
-      "dataType": "string"
-    },
-    */
+  serviceType: "ule_network_1",
+  variables: {
+    Address: {
+      dataType: string
+    }
   },
-  "actions": {
-    /*
-    "OpenRegistration": {
-      "args": {
-        "in": {
-          "Mode": {
-            "var": null
-          },
-          "Duration": {
-            "var": null
-          }
-        }
+  actions: {
+    OpenRegistration: {
+      in: {
+        Mode: null,
+        Duration: null
       }
     },
-    "GetAttribute": {
-      "args": {
-        "in": {
-          "DeviceId": {
-            "var": null
-          },
-          "UnitId": {
-            "var": null
-          },
-          "Interface": {
-            "var": null
-          },
-          "Attribute": {
-            "var": null
-          }
-        }
+    GetAttribute: {
+      in: {
+        DeviceId: null,
+        UnitId: null,
+        Interface: null,
+        Attribute: null
       }
     },
-    "GetAllAttributes": {
-      "args": {
-        "in": {
-          "DeviceId": {
-            "var": null
-          },
-          "UnitId": {
-            "var": null
-          },
-          "Interface": {
-            "var": null
-          }
-        }
+    GetAllAttributes: {
+      in: {
+        DeviceId: null,
+        UnitId: null,
+        Interface: null
       }
     },
-    "SetAttribute": {
-      "args": {
-        "in": {
-          "DeviceId": {
-            "var": null
-          },
-          "UnitId": {
-            "var": null
-          },
-          "Interface": {
-            "var": null
-          },
-          "Attribute": {
-            "var": null
-          },
-          "Value": {
-            "var": null
-          }
-        }
+    SetAttribute: {
+      in: {
+        DeviceId: null,
+        UnitId: null,
+        Interface: null,
+        Attribute: null,
+        Value: null
       }
     },
-    "GetDeviceInfo": {
-      "args": {
-        "in": {
-          "DeviceId": {
-            "var": null
-          }
-        }
+    GetDeviceInfo: {
+      in: {
+        DeviceId: null
       }
     },
-    "DeleteDevice": {
-      "args": {
-        "in": {
-          "DeviceId": {
-            "var": null
-          }
-        }
+    DeleteDevice: {
+      in: {
+        DeviceId: null
       }
     },
-    "GetDevices": {},
-    */
+    GetDevices: {}
   }
 };
+

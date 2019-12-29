@@ -1,12 +1,7 @@
 module.exports = {
-  "deviceType": "D_EnergyCalculator1",
-  "services": {
-    /*
-    "urn:upnp-org:serviceId:EnergyCalculator1": {
-      "prototype": "S_EnergyCalculator1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:EnergyCalculator:1"
+  deviceType: "energy_calculator_1",
+  upnpType: "urn:schemas-micasaverde-com:device:EnergyCalculator:1",
+  services: {
+    "urn:upnp-org:serviceId:EnergyCalculator1": require('../luup_services/energy_calculator_1')
+  }
 };

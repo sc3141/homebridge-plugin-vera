@@ -1,14 +1,8 @@
 module.exports = {
-  "serviceType": "S_USBUIRT",
-  "variables": {
-    /*
-    "ComPort": {
-      "dataType": "string"
-    },
-    */
-  },
-  "actions": {
-    /*
-    */
-  }
-};
+  serviceType: "usbuirt",
+  variables: {
+    ComPort: {
+      dataType: string
+    }
+  }};
+

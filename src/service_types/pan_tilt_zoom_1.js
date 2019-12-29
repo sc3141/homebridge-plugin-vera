@@ -1,38 +1,25 @@
 module.exports = {
-  "serviceType": "S_PanTiltZoom1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "MoveLeft": {},
-    "MoveRight": {},
-    "MoveUp": {},
-    "MoveDown": {},
-    "ZoomIn": {},
-    "ZoomOut": {},
-    "HorizontalPatrol": {},
-    "VerticalPatrol": {},
-    "StopPatrol": {},
-    "GoToPreset": {
-      "args": {
-        "in": {
-          "presetNumber": {
-            "var": "ui1"
-          }
-        }
+  serviceType: "pan_tilt_zoom_1",
+  actions: {
+    MoveLeft: {},
+    MoveRight: {},
+    MoveUp: {},
+    MoveDown: {},
+    ZoomIn: {},
+    ZoomOut: {},
+    HorizontalPatrol: {},
+    VerticalPatrol: {},
+    StopPatrol: {},
+    GoToPreset: {
+      in: {
+        presetNumber: "ui1"
       }
     },
-    "SetPreset": {
-      "args": {
-        "in": {
-          "presetNumber": {
-            "var": "ui1"
-          }
-        }
+    SetPreset: {
+      in: {
+        presetNumber: "ui1"
       }
-    },
-    */
+    }
   }
 };
+

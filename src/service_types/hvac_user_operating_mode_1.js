@@ -1,11 +1,10 @@
 module.exports = {
-  "serviceType": "S_HVAC_UserOperatingMode1",
-  "variables": {
-    /*
-    "ModeTarget": {
-      "dataType": "string",
-      "defVal": "Off",
-      "enumeration": [
+  serviceType: "hvac_user_operating_mode_1",
+  variables: {
+    ModeTarget: {
+      dataType: string,
+      defVal: "Off",
+      values: [
         "Off",
         "HeatOn",
         "CoolOn",
@@ -19,11 +18,10 @@ module.exports = {
         "EnergySavingsMode"
       ]
     },
-    "ModeStatus": {
-      "dataType": "string",
-      "defVal": "Off",
-      "shortCode": "mode",
-      "enumeration": [
+    ModeStatus: {
+      dataType: string,
+      defVal: "Off",
+      values: [
         "Off",
         "InDeadBand",
         "HeatOn",
@@ -37,98 +35,67 @@ module.exports = {
         "BuildingProtection",
         "EnergySavingsHeating",
         "EnergySavingsCooling"
-      ]
+      ],
+      shortCode: mode
     },
-    "EnergyModeTarget": {
-      "dataType": "string",
-      "defVal": "Normal",
-      "enumeration": [
+    EnergyModeTarget: {
+      dataType: string,
+      defVal: "Normal",
+      values: [
         "Normal",
         "EnergySavingsMode"
       ]
     },
-    "EnergyModeStatus": {
-      "dataType": "string",
-      "defVal": "Normal",
-      "enumeration": [
+    EnergyModeStatus: {
+      dataType: string,
+      defVal: "Normal",
+      values: [
         "Normal",
         "EnergySavingsMode"
       ]
     },
-    "Name": {
-      "optional": true,
-      "dataType": "string",
-      "defVal": ""
+    Name: {
+      optional: true,
+      dataType: string,
+      defVal: ""
     },
-    "A_ARG_TYPE_r4": {
-      "dataType": "r4"
-    },
-    */
+    A_ARG_TYPE_r4: {
+      dataType: r4
+    }
   },
-  "actions": {
-    /*
-    "SetModeTarget": {
-      "args": {
-        "in": {
-          "NewModeTarget": {
-            "var": "ModeTarget"
-          },
-          "NewHeatSetpoint": {
-            "var": "A_ARG_TYPE_r4"
-          },
-          "NewCoolSetpoint": {
-            "var": "A_ARG_TYPE_r4"
-          }
-        }
+  actions: {
+    SetModeTarget: {
+      in: {
+        NewModeTarget: "ModeTarget",
+        NewHeatSetpoint: "A_ARG_TYPE_r4",
+        NewCoolSetpoint: "A_ARG_TYPE_r4"
       }
     },
-    "SetEnergyModeTarget": {
-      "args": {
-        "in": {
-          "NewModeTarget": {
-            "var": "EnergyModeTarget"
-          }
-        }
+    SetEnergyModeTarget: {
+      in: {
+        NewModeTarget: "EnergyModeTarget"
       }
     },
-    "GetModeTarget": {
-      "args": {
-        "out": {
-          "CurrentModeTarget": {
-            "var": "ModeTarget"
-          }
-        }
+    GetModeTarget: {
+      out: {
+        CurrentModeTarget: "ModeTarget"
       }
     },
-    "GetModeStatus": {
-      "args": {
-        "out": {
-          "CurrentModeStatus": {
-            "var": "ModeStatus"
-          }
-        }
+    GetModeStatus: {
+      out: {
+        CurrentModeStatus: "ModeStatus"
       }
     },
-    "GetName": {
-      "optional": true,
-      "args": {
-        "out": {
-          "CurrentName": {
-            "var": "Name"
-          }
-        }
+    GetName: {
+      out: {
+        CurrentName: "Name"
       }
     },
-    "SetName": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewName": {
-            "var": "Name"
-          }
-        }
+    SetName: {
+      in: {
+        NewName: "Name"
       }
-    },
-    */
+    }
   }
 };
+

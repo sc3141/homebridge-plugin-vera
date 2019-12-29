@@ -1,82 +1,57 @@
 module.exports = {
-  "serviceType": "S_HVAC_FanOperatingMode1",
-  "variables": {
-    /*
-    "Mode": {
-      "dataType": "string",
-      "defVal": "Auto",
-      "shortCode": "fanmode",
-      "enumeration": [
+  serviceType: "hvac_fan_operating_mode_1",
+  variables: {
+    Mode: {
+      dataType: string,
+      defVal: "Auto",
+      values: [
         "Auto",
         "ContinuousOn",
         "PeriodicOn"
-      ]
+      ],
+      shortCode: fanmode
     },
-    "FanStatus": {
-      "dataType": "string",
-      "defVal": "On",
-      "shortCode": "fan",
-      "enumeration": [
+    FanStatus: {
+      dataType: string,
+      defVal: "On",
+      values: [
         "On",
         "Off"
-      ]
+      ],
+      shortCode: fan
     },
-    "Name": {
-      "optional": true,
-      "dataType": "string",
-      "defVal": ""
-    },
-    */
+    Name: {
+      optional: true,
+      dataType: string,
+      defVal: ""
+    }
   },
-  "actions": {
-    /*
-    "SetMode": {
-      "args": {
-        "in": {
-          "NewMode": {
-            "var": "Mode"
-          }
-        }
+  actions: {
+    SetMode: {
+      in: {
+        NewMode: "Mode"
       }
     },
-    "GetMode": {
-      "args": {
-        "out": {
-          "CurrentMode": {
-            "var": "Mode"
-          }
-        }
+    GetMode: {
+      out: {
+        CurrentMode: "Mode"
       }
     },
-    "GetFanStatus": {
-      "args": {
-        "out": {
-          "CurrentStatus": {
-            "var": "FanStatus"
-          }
-        }
+    GetFanStatus: {
+      out: {
+        CurrentStatus: "FanStatus"
       }
     },
-    "GetName": {
-      "optional": true,
-      "args": {
-        "out": {
-          "CurrentName": {
-            "var": "Name"
-          }
-        }
+    GetName: {
+      out: {
+        CurrentName: "Name"
       }
     },
-    "SetName": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewName": {
-            "var": "Name"
-          }
-        }
+    SetName: {
+      in: {
+        NewName: "Name"
       }
-    },
-    */
+    }
   }
 };
+

@@ -1,8 +1,6 @@
 module.exports = {
-  "deviceType": "D_SerialPortRoot1",
-  "services": {
-    /*
-    */
-  },
-  "upnpType": "urn:micasaverde-org:device:SerialPortRoot:1"
+  deviceType: "serial_port_root_1",
+  upnpType: "urn:micasaverde-org:device:SerialPortRoot:1",
+  services: {
+  }
 };

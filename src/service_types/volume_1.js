@@ -1,14 +1,9 @@
 module.exports = {
-  "serviceType": "S_Volume1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "Down": {},
-    "Mute": {},
-    "Up": {},
-    */
+  serviceType: "volume_1",
+  actions: {
+    Down: {},
+    Mute: {},
+    Up: {}
   }
 };
+

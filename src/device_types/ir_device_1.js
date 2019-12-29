@@ -1,12 +1,7 @@
 module.exports = {
-  "deviceType": "D_IrDevice1",
-  "services": {
-    /*
-    "urn:micasaverde-com:serviceId:IrDevice1": {
-      "prototype": "S_IrDevice1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:IrDevice:1"
+  deviceType: "ir_device_1",
+  upnpType: "urn:schemas-micasaverde-com:device:IrDevice:1",
+  services: {
+    "urn:micasaverde-com:serviceId:IrDevice1": require('../luup_services/ir_device_1')
+  }
 };

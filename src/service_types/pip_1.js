@@ -1,21 +1,16 @@
 module.exports = {
-  "serviceType": "S_PIP1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "ChannelDown": {},
-    "ChannelUp": {},
-    "Freeze": {},
-    "Input": {},
-    "Move": {},
-    "Multi": {},
-    "Off": {},
-    "On": {},
-    "Size": {},
-    "Swap": {},
-    */
+  serviceType: "pip_1",
+  actions: {
+    ChannelDown: {},
+    ChannelUp: {},
+    Freeze: {},
+    Input: {},
+    Move: {},
+    Multi: {},
+    Off: {},
+    On: {},
+    Size: {},
+    Swap: {}
   }
 };
+

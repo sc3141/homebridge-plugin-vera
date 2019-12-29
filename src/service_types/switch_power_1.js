@@ -1,48 +1,33 @@
 module.exports = {
-  "serviceType": "S_SwitchPower1",
-  "variables": {
-    /*
-    "Target": {
-      "eventable": false,
-      "dataType": "boolean",
-      "defVal": 0
+  serviceType: "switch_power_1",
+  variables: {
+    Target: {
+      dataType: boolean,
+      defVal: 0,
+      eventable: false
     },
-    "Status": {
-      "dataType": "boolean",
-      "defVal": 0,
-      "shortCode": "status"
-    },
-    */
+    Status: {
+      dataType: boolean,
+      defVal: 0,
+      shortCode: status
+    }
   },
-  "actions": {
-    /*
-    "SetTarget": {
-      "args": {
-        "in": {
-          "newTargetValue": {
-            "var": "Target"
-          }
-        }
+  actions: {
+    SetTarget: {
+      in: {
+        newTargetValue: "Target"
       }
     },
-    "GetTarget": {
-      "args": {
-        "out": {
-          "RetTargetValue": {
-            "var": "Target"
-          }
-        }
+    GetTarget: {
+      out: {
+        RetTargetValue: "Target"
       }
     },
-    "GetStatus": {
-      "args": {
-        "out": {
-          "ResultStatus": {
-            "var": "Status"
-          }
-        }
+    GetStatus: {
+      out: {
+        ResultStatus: "Status"
       }
-    },
-    */
+    }
   }
 };
+

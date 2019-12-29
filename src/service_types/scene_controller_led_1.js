@@ -1,26 +1,17 @@
 module.exports = {
-  "serviceType": "S_SceneControllerLED1",
-  "variables": {
-    /*
-    "Light": {
-      "dataType": "ui1"
-    },
-    */
+  serviceType: "scene_controller_led_1",
+  variables: {
+    Light: {
+      dataType: ui1
+    }
   },
-  "actions": {
-    /*
-    "SetLight": {
-      "args": {
-        "in": {
-          "newValue": {
-            "var": "Light"
-          },
-          "Indicator": {
-            "var": "Light"
-          }
-        }
+  actions: {
+    SetLight: {
+      in: {
+        newValue: "Light",
+        Indicator: "Light"
       }
-    },
-    */
+    }
   }
 };
+

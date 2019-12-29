@@ -1,105 +1,68 @@
 module.exports = {
-  "serviceType": "S_Irrigation1",
-  "variables": {
-    /*
-    "SystemConfig": {
-      "dataType": "string"
+  serviceType: "irrigation_1",
+  variables: {
+    SystemConfig: {
+      dataType: string
     },
-    "ValveId": {
-      "dataType": "ui1"
+    ValveId: {
+      dataType: ui1
     },
-    "MasterValve": {
-      "dataType": "boolean",
-      "defVal": 0
+    MasterValve: {
+      dataType: boolean,
+      defVal: 0
     },
-    "ValveConfig": {
-      "dataType": "string"
+    ValveConfig: {
+      dataType: string
     },
-    "Duration": {
-      "dataType": "ui2"
+    Duration: {
+      dataType: ui2
     },
-    "ValveTable": {
-      "dataType": "string"
+    ValveTable: {
+      dataType: string
     },
-    "ValveTableId": {
-      "dataType": "ui1"
+    ValveTableId: {
+      dataType: ui1
     },
-    "ValveTablesToRun": {
-      "dataType": "string"
-    },
-    */
+    ValveTablesToRun: {
+      dataType: string
+    }
   },
-  "actions": {
-    /*
-    "SetConfig": {
-      "args": {
-        "in": {
-          "SystemConfig": {
-            "var": "SystemConfig"
-          }
-        }
+  actions: {
+    SetConfig: {
+      in: {
+        SystemConfig: "SystemConfig"
       }
     },
-    "SetValveConfig": {
-      "args": {
-        "in": {
-          "ValveId": {
-            "var": "ValveId"
-          },
-          "MasterValve": {
-            "var": "MasterValve"
-          },
-          "ValveConfig": {
-            "var": "ValveConfig"
-          }
-        }
+    SetValveConfig: {
+      in: {
+        ValveId: "ValveId",
+        MasterValve: "MasterValve",
+        ValveConfig: "ValveConfig"
       }
     },
-    "RunValve": {
-      "args": {
-        "in": {
-          "ValveId": {
-            "var": "ValveId"
-          },
-          "MasterValve": {
-            "var": "MasterValve"
-          },
-          "Duration": {
-            "var": "Duration"
-          }
-        }
+    RunValve: {
+      in: {
+        ValveId: "ValveId",
+        MasterValve: "MasterValve",
+        Duration: "Duration"
       }
     },
-    "SetValveTable": {
-      "args": {
-        "in": {
-          "ValveTableId": {
-            "var": "ValveTableId"
-          },
-          "ValveTable": {
-            "var": "ValveTable"
-          }
-        }
+    SetValveTable: {
+      in: {
+        ValveTableId: "ValveTableId",
+        ValveTable: "ValveTable"
       }
     },
-    "RunValveTable": {
-      "args": {
-        "in": {
-          "ValveTablesToRun": {
-            "var": "ValveTablesToRun"
-          }
-        }
+    RunValveTable: {
+      in: {
+        ValveTablesToRun: "ValveTablesToRun"
       }
     },
-    "Shutoff": {
-      "args": {
-        "in": {
-          "Duration": {
-            "var": "Duration"
-          }
-        }
+    Shutoff: {
+      in: {
+        Duration: "Duration"
       }
-    },
-    */
+    }
   }
 };
+

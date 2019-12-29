@@ -1,16 +1,10 @@
 module.exports = {
-  "serviceType": "S_HumiditySensor1",
-  "variables": {
-    /*
-    "CurrentLevel": {
-      "eventable": true,
-      "dataType": "i4",
-      "shortCode": "humidity"
-    },
-    */
-  },
-  "actions": {
-    /*
-    */
-  }
-};
+  serviceType: "humidity_sensor_1",
+  variables: {
+    CurrentLevel: {
+      dataType: i4,
+      shortCode: humidity,
+      eventable: true
+    }
+  }};
+

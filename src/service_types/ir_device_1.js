@@ -1,42 +1,31 @@
 module.exports = {
-  "serviceType": "S_IrDevice1",
-  "variables": {
-    /*
-    "Codesets": {
-      "dataType": "string",
-      "shortCode": "codesets"
+  serviceType: "ir_device_1",
+  variables: {
+    Codesets: {
+      dataType: string,
+      shortCode: codesets
     },
-    "Codeset": {
-      "dataType": "string",
-      "shortCode": "codeset"
+    Codeset: {
+      dataType: string,
+      shortCode: codeset
     },
-    "Remote": {
-      "dataType": "int",
-      "shortCode": "remote"
+    Remote: {
+      dataType: int,
+      shortCode: remote
     },
-    "Scene": {
-      "dataType": "string",
-      "shortCode": "scene"
-    },
-    */
+    Scene: {
+      dataType: string,
+      shortCode: scene
+    }
   },
-  "actions": {
-    /*
-    "SendCode": {
-      "args": {
-        "in": {
-          "Codeset": {
-            "var": "Codeset"
-          },
-          "Button": {
-            "var": "Remote"
-          },
-          "Repeat": {
-            "var": "Remote"
-          }
-        }
+  actions: {
+    SendCode: {
+      in: {
+        Codeset: "Codeset",
+        Button: "Remote",
+        Repeat: "Remote"
       }
-    },
-    */
+    }
   }
 };
+

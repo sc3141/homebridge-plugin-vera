@@ -1,99 +1,74 @@
 module.exports = {
-  "serviceType": "S_Camera1",
-  "variables": {
-    /*
-    "UseCMS": {
-      "dataType": "boolean",
-      "defVal": 0,
-      "shortCode": "cms"
+  serviceType: "camera_1",
+  variables: {
+    UseCMS: {
+      dataType: boolean,
+      defVal: 0,
+      shortCode: cms
     },
-    "VideoURLs": {
-      "dataType": "string",
-      "shortCode": "videourls"
+    VideoURLs: {
+      dataType: string,
+      shortCode: videourls
     },
-    "URL": {
-      "dataType": "string",
-      "defVal": "",
-      "shortCode": "url"
+    URL: {
+      dataType: string,
+      defVal: "",
+      shortCode: url
     },
-    "DirectStreamingURL": {
-      "dataType": "string",
-      "shortCode": "streaming"
+    DirectStreamingURL: {
+      dataType: string,
+      shortCode: streaming
     },
-    "RtspURL": {
-      "dataType": "string",
-      "shortCode": "rtsp"
+    RtspURL: {
+      dataType: string,
+      shortCode: rtsp
     },
-    "RelatedSensors": {
-      "dataType": "string"
+    RelatedSensors: {
+      dataType: string
     },
-    "SensorArchiveSeconds": {
-      "dataType": "ui4"
+    SensorArchiveSeconds: {
+      dataType: ui4
     },
-    "RelatedLights": {
-      "dataType": "string"
+    RelatedLights: {
+      dataType: string
     },
-    "LightOptions": {
-      "dataType": "string"
+    LightOptions: {
+      dataType: string
     },
-    "AutoArchiveSeconds": {
-      "dataType": "ui4"
+    AutoArchiveSeconds: {
+      dataType: ui4
     },
-    "AutoArchivePreserveDays": {
-      "dataType": "ui4"
+    AutoArchivePreserveDays: {
+      dataType: ui4
     },
-    "LoopRequest": {
-      "dataType": "boolean"
-    },
-    */
+    LoopRequest: {
+      dataType: boolean
+    }
   },
-  "actions": {
-    /*
-    "ArchiveVideo": {
-      "args": {
-        "in": {
-          "Format": {
-            "var": "ui1"
-          },
-          "Duration": {
-            "var": "ui1"
-          }
-        }
+  actions: {
+    ArchiveVideo: {
+      in: {
+        Format: "ui1",
+        Duration: "ui1"
       }
     },
-    "SetPassword": {
-      "args": {
-        "in": {
-          "username": {
-            "var": "string"
-          },
-          "password": {
-            "var": "string"
-          }
-        }
+    SetPassword: {
+      in: {
+        username: "string",
+        password: "string"
       }
     },
-    "GetWifiNetworks": {},
-    "SetWifiNetwork": {
-      "args": {
-        "in": {
-          "enable": {
-            "var": "boolean"
-          },
-          "ssid": {
-            "var": "string"
-          },
-          "security": {
-            "var": "string"
-          },
-          "passkey": {
-            "var": "string"
-          }
-        }
+    GetWifiNetworks: {},
+    SetWifiNetwork: {
+      in: {
+        enable: "boolean",
+        ssid: "string",
+        security: "string",
+        passkey: "string"
       }
     },
-    "GeneratePassword": {},
-    "Reboot": {},
-    */
+    GeneratePassword: {},
+    Reboot: {}
   }
 };
+

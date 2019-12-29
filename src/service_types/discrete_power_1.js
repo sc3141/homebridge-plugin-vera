@@ -1,13 +1,8 @@
 module.exports = {
-  "serviceType": "S_DiscretePower1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "Off": {},
-    "On": {},
-    */
+  serviceType: "discrete_power_1",
+  actions: {
+    Off: {},
+    On: {}
   }
 };
+

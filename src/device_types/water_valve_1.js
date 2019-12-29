@@ -1,16 +1,8 @@
 module.exports = {
-  "deviceType": "D_WaterValve1",
-  "services": {
-    /*
-    "urn:upnp-org:serviceId:SwitchPower1": {
-      "prototype": "S_SwitchPower1",
-      "overlay": {}
-    },
-    "urn:micasaverde-com:serviceId:HaDevice1": {
-      "prototype": "S_HaDevice1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:WaterValve:1"
+  deviceType: "water_valve_1",
+  upnpType: "urn:schemas-micasaverde-com:device:WaterValve:1",
+  services: {
+    "urn:upnp-org:serviceId:SwitchPower1": require('../luup_services/switch_power_1'),
+    "urn:micasaverde-com:serviceId:HaDevice1": require('../luup_services/ha_device_1')
+  }
 };

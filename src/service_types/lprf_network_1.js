@@ -1,36 +1,25 @@
 module.exports = {
-  "serviceType": "S_LPRFNetwork1",
-  "variables": {
-    /*
-    "NodeType": {
-      "dataType": "string"
+  serviceType: "lprf_network_1",
+  variables: {
+    NodeType: {
+      dataType: string
     },
-    "NodeId": {
-      "dataType": "ui4"
+    NodeId: {
+      dataType: ui4
     },
-    "Timeout": {
-      "dataType": "ui2"
-    },
-    */
+    Timeout: {
+      dataType: ui2
+    }
   },
-  "actions": {
-    /*
-    "AddNodes": {
-      "args": {
-        "in": {
-          "NodeType": {
-            "var": "NodeType"
-          },
-          "NodeId": {
-            "var": "NodeId"
-          },
-          "Timeout": {
-            "var": "Timeout"
-          }
-        }
+  actions: {
+    AddNodes: {
+      in: {
+        NodeType: "NodeType",
+        NodeId: "NodeId",
+        Timeout: "Timeout"
       }
     },
-    "ResetReceiver": {},
-    */
+    ResetReceiver: {}
   }
 };
+

@@ -1,12 +1,7 @@
 module.exports = {
-  "deviceType": "D_ComboDevice1",
-  "services": {
-    /*
-    "urn:micasaverde-com:serviceId:HaDevice1": {
-      "prototype": "S_HaDevice1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:ComboDevice:1"
+  deviceType: "combo_device_1",
+  upnpType: "urn:schemas-micasaverde-com:device:ComboDevice:1",
+  services: {
+    "urn:micasaverde-com:serviceId:HaDevice1": require('../luup_services/ha_device_1')
+  }
 };

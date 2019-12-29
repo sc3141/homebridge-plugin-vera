@@ -1,99 +1,64 @@
 module.exports = {
-  "serviceType": "S_TemperatureSetpoint1",
-  "variables": {
-    /*
-    "Application": {
-      "eventable": true,
-      "dataType": "string"
+  serviceType: "temperature_setpoint_1",
+  variables: {
+    Application: {
+      dataType: string,
+      eventable: true
     },
-    "CurrentSetpoint": {
-      "eventable": true,
-      "dataType": "i4",
-      "shortCode": "setpoint"
+    CurrentSetpoint: {
+      dataType: i4,
+      shortCode: setpoint,
+      eventable: true
     },
-    "SetpointAchieved": {
-      "optional": true,
-      "eventable": true,
-      "dataType": "boolean",
-      "defVal": 0
+    SetpointAchieved: {
+      optional: true,
+      dataType: boolean,
+      defVal: 0,
+      eventable: true
     },
-    "Name": {
-      "optional": true,
-      "eventable": true,
-      "dataType": "string",
-      "defVal": ""
-    },
-    */
+    Name: {
+      optional: true,
+      dataType: string,
+      defVal: "",
+      eventable: true
+    }
   },
-  "actions": {
-    /*
-    "GetApplication": {
-      "args": {
-        "out": {
-          "CurrentApplication": {
-            "var": "Application"
-          }
-        }
+  actions: {
+    GetApplication: {
+      out: {
+        CurrentApplication: "Application"
       }
     },
-    "SetApplication": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewApplication": {
-            "var": "Application"
-          }
-        }
+    SetApplication: {
+      in: {
+        NewApplication: "Application"
       }
     },
-    "SetCurrentSetpoint": {
-      "args": {
-        "in": {
-          "NewCurrentSetpoint": {
-            "var": "CurrentSetpoint"
-          }
-        }
+    SetCurrentSetpoint: {
+      in: {
+        NewCurrentSetpoint: "CurrentSetpoint"
       }
     },
-    "GetCurrentSetpoint": {
-      "args": {
-        "out": {
-          "CurrentSP": {
-            "var": "CurrentSetpoint"
-          }
-        }
+    GetCurrentSetpoint: {
+      out: {
+        CurrentSP: "CurrentSetpoint"
       }
     },
-    "GetSetpointAchieved": {
-      "optional": true,
-      "args": {
-        "out": {
-          "CurrentSPA": {
-            "var": "SetpointAchieved"
-          }
-        }
+    GetSetpointAchieved: {
+      out: {
+        CurrentSPA: "SetpointAchieved"
       }
     },
-    "GetName": {
-      "optional": true,
-      "args": {
-        "out": {
-          "CurrentName": {
-            "var": "Name"
-          }
-        }
+    GetName: {
+      out: {
+        CurrentName: "Name"
       }
     },
-    "SetName": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewName": {
-            "var": "Name"
-          }
-        }
+    SetName: {
+      in: {
+        NewName: "Name"
       }
-    },
-    */
+    }
   }
 };
+

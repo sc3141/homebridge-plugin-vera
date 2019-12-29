@@ -1,14 +1,9 @@
 module.exports = {
-  "serviceType": "S_WindowCovering1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "Up": {},
-    "Down": {},
-    "Stop": {},
-    */
+  serviceType: "window_covering_1",
+  actions: {
+    Up: {},
+    Down: {},
+    Stop: {}
   }
 };
+

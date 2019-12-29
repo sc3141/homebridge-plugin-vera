@@ -1,55 +1,40 @@
 module.exports = {
-  "serviceType": "S_Color1",
-  "variables": {
-    /*
-    "CurrentColor": {
-      "eventable": false,
-      "dataType": "string"
+  serviceType: "color_1",
+  variables: {
+    CurrentColor: {
+      dataType: string,
+      eventable: false
     },
-    "TargetColor": {
-      "eventable": false,
-      "dataType": "string"
+    TargetColor: {
+      dataType: string,
+      eventable: false
     },
-    "SupportedColors": {
-      "eventable": false,
-      "dataType": "string"
+    SupportedColors: {
+      dataType: string,
+      eventable: false
     },
-    "ColorChannelPriorities": {
-      "optional": true,
-      "eventable": false,
-      "dataType": "string"
-    },
-    */
+    ColorChannelPriorities: {
+      optional: true,
+      dataType: string,
+      eventable: false
+    }
   },
-  "actions": {
-    /*
-    "SetColor": {
-      "args": {
-        "in": {
-          "newColorTarget": {
-            "var": "TargetColor"
-          }
-        }
+  actions: {
+    SetColor: {
+      in: {
+        newColorTarget: "TargetColor"
       }
     },
-    "SetColorRGB": {
-      "args": {
-        "in": {
-          "newColorRGBTarget": {
-            "var": "TargetColor"
-          }
-        }
+    SetColorRGB: {
+      in: {
+        newColorRGBTarget: "TargetColor"
       }
     },
-    "SetColorTemp": {
-      "args": {
-        "in": {
-          "newColorTempTarget": {
-            "var": "TargetColor"
-          }
-        }
+    SetColorTemp: {
+      in: {
+        newColorTempTarget: "TargetColor"
       }
-    },
-    */
+    }
   }
 };
+

@@ -1,28 +1,21 @@
 module.exports = {
-  "serviceType": "S_IrTransmitter1",
-  "variables": {
-    /*
-    "ProntoCode": {
-      "eventable": false,
-      "dataType": "string"
+  serviceType: "ir_transmitter_1",
+  variables: {
+    ProntoCode: {
+      dataType: string,
+      eventable: false
     },
-    "Status": {
-      "dataType": "boolean",
-      "defVal": 0
-    },
-    */
+    Status: {
+      dataType: boolean,
+      defVal: 0
+    }
   },
-  "actions": {
-    /*
-    "SendProntoCode": {
-      "args": {
-        "in": {
-          "ProntoCode": {
-            "var": "ProntoCode"
-          }
-        }
+  actions: {
+    SendProntoCode: {
+      in: {
+        ProntoCode: "ProntoCode"
       }
-    },
-    */
+    }
   }
 };
+

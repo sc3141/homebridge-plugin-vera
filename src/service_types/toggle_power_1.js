@@ -1,12 +1,7 @@
 module.exports = {
-  "serviceType": "S_TogglePower1",
-  "variables": {
-    /*
-    */
-  },
-  "actions": {
-    /*
-    "OnOff": {},
-    */
+  serviceType: "toggle_power_1",
+  actions: {
+    OnOff: {}
   }
 };
+

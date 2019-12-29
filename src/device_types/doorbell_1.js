@@ -1,20 +1,9 @@
 module.exports = {
-  "deviceType": "D_Doorbell1",
-  "services": {
-    /*
-    "urn:micasaverde-com:serviceId:SecuritySensor1": {
-      "prototype": "S_SecuritySensor1",
-      "overlay": {}
-    },
-    "urn:micasaverde-com:serviceId:HaDevice1": {
-      "prototype": "S_HaDevice1",
-      "overlay": {}
-    },
-    "urn:micasaverde-com:serviceId:LPRFDevice1": {
-      "prototype": "S_LPRFDevice1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:Doorbell:1"
+  deviceType: "doorbell_1",
+  upnpType: "urn:schemas-micasaverde-com:device:Doorbell:1",
+  services: {
+    "urn:micasaverde-com:serviceId:SecuritySensor1": require('../luup_services/security_sensor_1'),
+    "urn:micasaverde-com:serviceId:HaDevice1": require('../luup_services/ha_device_1'),
+    "urn:micasaverde-com:serviceId:LPRFDevice1": require('../luup_services/lprf_device_1')
+  }
 };

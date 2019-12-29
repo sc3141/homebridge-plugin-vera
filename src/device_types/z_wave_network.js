@@ -1,12 +1,7 @@
 module.exports = {
-  "deviceType": "D_ZWaveNetwork",
-  "services": {
-    /*
-    "urn:micasaverde-com:serviceId:ZWaveNetwork1": {
-      "prototype": "S_ZWaveNetwork1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:ZWaveNetwork:1"
+  deviceType: "z_wave_network",
+  upnpType: "urn:schemas-micasaverde-com:device:ZWaveNetwork:1",
+  services: {
+    "urn:micasaverde-com:serviceId:ZWaveNetwork1": require('../luup_services/z_wave_network_1')
+  }
 };

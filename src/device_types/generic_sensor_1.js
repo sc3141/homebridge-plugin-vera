@@ -1,16 +1,8 @@
 module.exports = {
-  "deviceType": "D_GenericSensor1",
-  "services": {
-    /*
-    "urn:micasaverde-com:serviceId:GenericSensor1": {
-      "prototype": "S_GenericSensor1",
-      "overlay": {}
-    },
-    "urn:micasaverde-com:serviceId:HaDevice1": {
-      "prototype": "S_HaDevice1",
-      "overlay": {}
-    },
-    */
-  },
-  "upnpType": "urn:schemas-micasaverde-com:device:GenericSensor:1"
+  deviceType: "generic_sensor_1",
+  upnpType: "urn:schemas-micasaverde-com:device:GenericSensor:1",
+  services: {
+    "urn:micasaverde-com:serviceId:GenericSensor1": require('../luup_services/generic_sensor_1'),
+    "urn:micasaverde-com:serviceId:HaDevice1": require('../luup_services/ha_device_1')
+  }
 };

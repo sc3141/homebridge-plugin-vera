@@ -1,84 +1,58 @@
 module.exports = {
-  "serviceType": "S_TemperatureSensor1",
-  "variables": {
-    /*
-    "CurrentTemperature": {
-      "eventable": true,
-      "dataType": "i4",
-      "defVal": 2000,
-      "shortCode": "temperature",
-      "min": 0,
-      "max": 4000
+  serviceType: "temperature_sensor_1",
+  variables: {
+    CurrentTemperature: {
+      dataType: i4,
+      defVal: 2000,
+      min: 0,
+      max: 4000,
+      shortCode: temperature,
+      eventable: true
     },
-    "Application": {
-      "eventable": true,
-      "dataType": "string",
-      "defVal": "Room",
-      "enumeration": [
+    Application: {
+      dataType: string,
+      defVal: "Room",
+      values: [
         "Room",
         "Outdoor",
         "Pipe",
         "AirDuct"
-      ]
+      ],
+      eventable: true
     },
-    "Name": {
-      "optional": true,
-      "eventable": true,
-      "dataType": "string",
-      "defVal": ""
-    },
-    */
+    Name: {
+      optional: true,
+      dataType: string,
+      defVal: "",
+      eventable: true
+    }
   },
-  "actions": {
-    /*
-    "GetApplication": {
-      "args": {
-        "out": {
-          "CurrentApplication": {
-            "var": "Application"
-          }
-        }
+  actions: {
+    GetApplication: {
+      out: {
+        CurrentApplication: "Application"
       }
     },
-    "SetApplication": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewApplication": {
-            "var": "Application"
-          }
-        }
+    SetApplication: {
+      in: {
+        NewApplication: "Application"
       }
     },
-    "GetCurrentTemperature": {
-      "args": {
-        "out": {
-          "CurrentTemp": {
-            "var": "CurrentTemperature"
-          }
-        }
+    GetCurrentTemperature: {
+      out: {
+        CurrentTemp: "CurrentTemperature"
       }
     },
-    "GetName": {
-      "optional": true,
-      "args": {
-        "out": {
-          "CurrentName": {
-            "var": "Name"
-          }
-        }
+    GetName: {
+      out: {
+        CurrentName: "Name"
       }
     },
-    "SetName": {
-      "optional": true,
-      "args": {
-        "in": {
-          "NewName": {
-            "var": "Name"
-          }
-        }
+    SetName: {
+      in: {
+        NewName: "Name"
       }
-    },
-    */
+    }
   }
 };
+

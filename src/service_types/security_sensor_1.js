@@ -1,42 +1,35 @@
 module.exports = {
-  "serviceType": "S_SecuritySensor1",
-  "variables": {
-    /*
-    "Tripped": {
-      "eventable": true,
-      "dataType": "boolean",
-      "shortCode": "tripped",
-      "defVal": false
+  serviceType: "security_sensor_1",
+  variables: {
+    Tripped: {
+      dataType: boolean,
+      defVal: false,
+      shortCode: tripped,
+      eventable: true
     },
-    "Armed": {
-      "eventable": true,
-      "dataType": "boolean",
-      "shortCode": "armed",
-      "defVal": 0
+    Armed: {
+      dataType: boolean,
+      defVal: 0,
+      shortCode: armed,
+      eventable: true
     },
-    "ArmedTripped": {
-      "eventable": true,
-      "dataType": "boolean",
-      "shortCode": "armedtripped",
-      "defVal": 0
+    ArmedTripped: {
+      dataType: boolean,
+      defVal: 0,
+      shortCode: armedtripped,
+      eventable: true
     },
-    "LastTrip": {
-      "dataType": "i4",
-      "shortCode": "lasttrip"
-    },
-    */
+    LastTrip: {
+      dataType: i4,
+      shortCode: lasttrip
+    }
   },
-  "actions": {
-    /*
-    "SetArmed": {
-      "args": {
-        "in": {
-          "newArmedValue": {
-            "var": "Armed"
-          }
-        }
+  actions: {
+    SetArmed: {
+      in: {
+        newArmedValue: "Armed"
       }
-    },
-    */
+    }
   }
 };
+

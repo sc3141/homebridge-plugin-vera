@@ -1,33 +1,22 @@
 module.exports = {
-  "serviceType": "S_BluetoothNetwork1",
-  "variables": {
-    /*
-    "Address": {
-      "dataType": "string"
-    },
-    */
+  serviceType: "bluetooth_network_1",
+  variables: {
+    Address: {
+      dataType: string
+    }
   },
-  "actions": {
-    /*
-    "Scan": {
-      "args": {
-        "in": {
-          "Duration": {
-            "var": null
-          }
-        }
+  actions: {
+    Scan: {
+      in: {
+        Duration: null
       }
     },
-    "Add": {
-      "args": {
-        "in": {
-          "Address": {
-            "var": null
-          }
-        }
+    Add: {
+      in: {
+        Address: null
       }
     },
-    "ScanResults": {},
-    */
+    ScanResults: {}
   }
 };
+
