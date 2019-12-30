@@ -15,7 +15,7 @@ process.stdout.write(`  services: {\n`);
 if (json.services && json.services.length) {
   process.stdout.write('    ');
   svc_lines = json.services.map(svc =>
-    `"${svc.serviceId}": require(\'${service_dir}/${svc.prototype}\')`,
+    `"${svc.serviceId}": {\n      api: require(\'${service_dir}/${svc.prototype}\')\n    }`,
   ).join(',\n    ');
   process.stdout.write(svc_lines);
   process.stdout.write(`\n`);
