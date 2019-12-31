@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "hvac_user_operating_mode_1",
   variables: {
     ModeTarget: {
-      dataType: string,
+      dataType: "string",
       defVal: "Off",
       values: [
         "Off",
@@ -19,7 +19,7 @@ module.exports = {
       ]
     },
     ModeStatus: {
-      dataType: string,
+      dataType: "string",
       defVal: "Off",
       values: [
         "Off",
@@ -36,10 +36,10 @@ module.exports = {
         "EnergySavingsHeating",
         "EnergySavingsCooling"
       ],
-      shortCode: mode
+      shortCode: "mode"
     },
     EnergyModeTarget: {
-      dataType: string,
+      dataType: "string",
       defVal: "Normal",
       values: [
         "Normal",
@@ -47,7 +47,7 @@ module.exports = {
       ]
     },
     EnergyModeStatus: {
-      dataType: string,
+      dataType: "string",
       defVal: "Normal",
       values: [
         "Normal",
@@ -56,11 +56,11 @@ module.exports = {
     },
     Name: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       defVal: ""
     },
     A_ARG_TYPE_r4: {
-      dataType: r4
+      dataType: "r4"
     }
   },
   actions: {

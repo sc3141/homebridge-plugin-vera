@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "scene_controller_led_1",
   variables: {
     Light: {
-      dataType: ui1
+      dataType: "ui1"
     }
   },
   actions: {

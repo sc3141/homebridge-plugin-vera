@@ -2,26 +2,26 @@ module.exports = {
   serviceType: "security_sensor_1",
   variables: {
     Tripped: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: false,
-      shortCode: tripped,
+      shortCode: "tripped",
       eventable: true
     },
     Armed: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
-      shortCode: armed,
+      shortCode: "armed",
       eventable: true
     },
     ArmedTripped: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
-      shortCode: armedtripped,
+      shortCode: "armedtripped",
       eventable: true
     },
     LastTrip: {
-      dataType: i4,
-      shortCode: lasttrip
+      dataType: "i4",
+      shortCode: "lasttrip"
     }
   },
   actions: {

@@ -2,47 +2,47 @@ module.exports = {
   serviceType: "camera_1",
   variables: {
     UseCMS: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
-      shortCode: cms
+      shortCode: "cms"
     },
     VideoURLs: {
-      dataType: string,
-      shortCode: videourls
+      dataType: "string",
+      shortCode: "videourls"
     },
     URL: {
-      dataType: string,
+      dataType: "string",
       defVal: "",
-      shortCode: url
+      shortCode: "url"
     },
     DirectStreamingURL: {
-      dataType: string,
-      shortCode: streaming
+      dataType: "string",
+      shortCode: "streaming"
     },
     RtspURL: {
-      dataType: string,
-      shortCode: rtsp
+      dataType: "string",
+      shortCode: "rtsp"
     },
     RelatedSensors: {
-      dataType: string
+      dataType: "string"
     },
     SensorArchiveSeconds: {
-      dataType: ui4
+      dataType: "ui4"
     },
     RelatedLights: {
-      dataType: string
+      dataType: "string"
     },
     LightOptions: {
-      dataType: string
+      dataType: "string"
     },
     AutoArchiveSeconds: {
-      dataType: ui4
+      dataType: "ui4"
     },
     AutoArchivePreserveDays: {
-      dataType: ui4
+      dataType: "ui4"
     },
     LoopRequest: {
-      dataType: boolean
+      dataType: "boolean"
     }
   },
   actions: {

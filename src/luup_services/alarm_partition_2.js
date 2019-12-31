@@ -2,16 +2,16 @@ module.exports = {
   serviceType: "alarm_partition_2",
   variables: {
     ArmMode: {
-      dataType: string,
+      dataType: "string",
       defVal: "Disarmed",
       values: [
         "Disarmed",
         "Armed"
       ],
-      shortCode: armmode
+      shortCode: "armmode"
     },
     DetailedArmMode: {
-      dataType: string,
+      dataType: "string",
       defVal: "Ready",
       values: [
         "Disarmed",
@@ -29,48 +29,48 @@ module.exports = {
         "EntryDelay",
         "ExitDelay"
       ],
-      shortCode: detailedarmmode
+      shortCode: "detailedarmmode"
     },
     Alarm: {
-      dataType: string,
+      dataType: "string",
       defVal: "None",
       values: [
         "None",
         "Active"
       ],
-      shortCode: alarm
+      shortCode: "alarm"
     },
     ChimeEnabled: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: false,
-      shortCode: chimeenabled
+      shortCode: "chimeenabled"
     },
     AlarmMemory: {
-      dataType: boolean,
-      shortCode: alarmmemory
+      dataType: "boolean",
+      shortCode: "alarmmemory"
     },
     LastAlarmActive: {
-      dataType: ui4,
+      dataType: "ui4",
       defVal: 0,
-      shortCode: lastalarmactive
+      shortCode: "lastalarmactive"
     },
     LastUser: {
-      dataType: string,
+      dataType: "string",
       defVal: "",
-      shortCode: lastuser
+      shortCode: "lastuser"
     },
     VendorStatus: {
-      dataType: string,
+      dataType: "string",
       defVal: "",
-      shortCode: vendorstatus
+      shortCode: "vendorstatus"
     },
     VendorStatusCode: {
-      dataType: string,
-      shortCode: vendorstatuscode
+      dataType: "string",
+      shortCode: "vendorstatuscode"
     },
     VendorStatusData: {
-      dataType: string,
-      shortCode: vendorstatusdata
+      dataType: "string",
+      shortCode: "vendorstatusdata"
     }
   },
   actions: {

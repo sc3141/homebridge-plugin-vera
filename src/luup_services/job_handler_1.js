@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "job_handler_1",
   variables: {
     NumActiveJobs: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100,

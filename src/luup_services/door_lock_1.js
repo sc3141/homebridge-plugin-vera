@@ -2,61 +2,61 @@ module.exports = {
   serviceType: "door_lock_1",
   variables: {
     Target: {
-      dataType: boolean,
+      dataType: "boolean",
       eventable: false
     },
     Status: {
-      dataType: boolean,
-      shortCode: locked
+      dataType: "boolean",
+      shortCode: "locked"
     },
     PinCodes: {
-      dataType: string,
-      shortCode: pincodes
+      dataType: "string",
+      shortCode: "pincodes"
     },
     sl_UserCode: {
-      dataType: string
+      dataType: "string"
     },
     sl_PinFailed: {
-      dataType: boolean
+      dataType: "boolean"
     },
     sl_CodeChanged: {
-      dataType: int
+      dataType: "int"
     },
     sl_LockButton: {
-      dataType: boolean
+      dataType: "boolean"
     },
     sl_LockFailure: {
-      dataType: boolean
+      dataType: "boolean"
     },
     sl_UnauthUser: {
-      dataType: string
+      dataType: "string"
     },
     sl_PinProgramSuccess: {
-      dataType: string
+      dataType: "string"
     },
     sl_PinRemoveSuccess: {
-      dataType: string
+      dataType: "string"
     },
     sl_PinProgramFail: {
-      dataType: string
+      dataType: "string"
     },
     sl_LockChanged: {
-      dataType: string
+      dataType: "string"
     },
     sl_LowBattery: {
-      dataType: boolean
+      dataType: "boolean"
     },
     sl_VeryLowBattery: {
-      dataType: boolean
+      dataType: "boolean"
     },
     dateTime: {
-      dataType: dateTime
+      dataType: "dateTime"
     },
     ui4: {
-      dataType: ui4
+      dataType: "ui4"
     },
     ui1: {
-      dataType: ui1
+      dataType: "ui1"
     }
   },
   actions: {

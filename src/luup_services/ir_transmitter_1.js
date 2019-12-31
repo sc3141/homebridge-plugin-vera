@@ -2,11 +2,11 @@ module.exports = {
   serviceType: "ir_transmitter_1",
   variables: {
     ProntoCode: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     Status: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0
     }
   },

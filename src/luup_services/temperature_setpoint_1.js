@@ -2,23 +2,23 @@ module.exports = {
   serviceType: "temperature_setpoint_1",
   variables: {
     Application: {
-      dataType: string,
+      dataType: "string",
       eventable: true
     },
     CurrentSetpoint: {
-      dataType: i4,
-      shortCode: setpoint,
+      dataType: "i4",
+      shortCode: "setpoint",
       eventable: true
     },
     SetpointAchieved: {
       optional: true,
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     Name: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       defVal: "",
       eventable: true
     }

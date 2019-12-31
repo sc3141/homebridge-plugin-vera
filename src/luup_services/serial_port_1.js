@@ -2,11 +2,11 @@ module.exports = {
   serviceType: "serial_port_1",
   variables: {
     path: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     baud: {
-      dataType: ui4,
+      dataType: "ui4",
       defVal: 9600,
       values: [
         "300",
@@ -23,7 +23,7 @@ module.exports = {
       eventable: false
     },
     stopbits: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 1,
       values: [
         "0",
@@ -32,7 +32,7 @@ module.exports = {
       ]
     },
     databits: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 8,
       values: [
         "7",
@@ -40,7 +40,7 @@ module.exports = {
       ]
     },
     parity: {
-      dataType: string,
+      dataType: "string",
       defVal: "none",
       values: [
         "none",

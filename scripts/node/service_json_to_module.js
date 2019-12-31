@@ -11,7 +11,7 @@ processStateVars = function(json, indent) {
       let attrs = [];
 
       if (varDef.hasOwnProperty("optional")) attrs.push(`optional: ${varDef.optional}`);
-      if (varDef.hasOwnProperty("dataType")) attrs.push(`dataType: ${varDef.dataType}`);
+      if (varDef.hasOwnProperty("dataType")) attrs.push(`dataType: "${varDef.dataType}"`);
 
       // default value
       if (varDef.hasOwnProperty("defVal")) {
@@ -30,7 +30,7 @@ processStateVars = function(json, indent) {
         e.push(`]`);
         attrs.push(e.join(`\n${attrIndent}`));
       }
-      if (varDef.hasOwnProperty("shortCode")) attrs.push(`shortCode: ${varDef.shortCode}`);
+      if (varDef.hasOwnProperty("shortCode")) attrs.push(`shortCode: "${varDef.shortCode}"`);
       if (varDef.hasOwnProperty("eventable")) attrs.push(`eventable: ${varDef.eventable}`);
 
       let varString = `    ${name}: {\n`;

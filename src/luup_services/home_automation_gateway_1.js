@@ -2,10 +2,10 @@ module.exports = {
   serviceType: "home_automation_gateway_1",
   variables: {
     UserData: {
-      dataType: string
+      dataType: "string"
     },
     DataFormat: {
-      dataType: string,
+      dataType: "string",
       defVal: "xml",
       values: [
         "json",
@@ -13,25 +13,25 @@ module.exports = {
       ]
     },
     DeviceNum: {
-      dataType: ui4
+      dataType: "ui4"
     },
     DataVersion: {
-      dataType: ui4
+      dataType: "ui4"
     },
     UDN: {
-      dataType: string
+      dataType: "string"
     },
     ActiveScenes: {
-      dataType: string
+      dataType: "string"
     },
     DataVersionUserData: {
-      dataType: ui4
+      dataType: "ui4"
     },
     DataVersionStatus: {
-      dataType: ui4
+      dataType: "ui4"
     },
     Reload: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 1
     }
   },

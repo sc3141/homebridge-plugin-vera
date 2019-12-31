@@ -2,41 +2,41 @@ module.exports = {
   serviceType: "energy_metering_1",
   variables: {
     Watts: {
-      dataType: ui4,
-      shortCode: watts
+      dataType: "ui4",
+      shortCode: "watts"
     },
     ActualUsage: {
-      dataType: boolean
+      dataType: "boolean"
     },
     WholeHouse: {
-      dataType: boolean,
-      shortCode: wholehouse
+      dataType: "boolean",
+      shortCode: "wholehouse"
     },
     Pulse: {
-      dataType: ui4,
-      shortCode: pulse
+      dataType: "ui4",
+      shortCode: "pulse"
     },
     UserSuppliedWattage: {
-      dataType: ui4
+      dataType: "ui4"
     },
     KWH: {
-      dataType: ui4,
-      shortCode: kwh
+      dataType: "ui4",
+      shortCode: "kwh"
     },
     DayKWH: {
-      dataType: number
+      dataType: "number"
     },
     WeekKWH: {
-      dataType: number
+      dataType: "number"
     },
     MonthKWH: {
-      dataType: number
+      dataType: "number"
     },
     YearKWH: {
-      dataType: number
+      dataType: "number"
     },
     LifeKWH: {
-      dataType: number
+      dataType: "number"
     }
   },
   actions: {

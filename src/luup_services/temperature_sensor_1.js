@@ -2,15 +2,15 @@ module.exports = {
   serviceType: "temperature_sensor_1",
   variables: {
     CurrentTemperature: {
-      dataType: i4,
+      dataType: "i4",
       defVal: 2000,
       min: 0,
       max: 4000,
-      shortCode: temperature,
+      shortCode: "temperature",
       eventable: true
     },
     Application: {
-      dataType: string,
+      dataType: "string",
       defVal: "Room",
       values: [
         "Room",
@@ -22,7 +22,7 @@ module.exports = {
     },
     Name: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       defVal: "",
       eventable: true
     }

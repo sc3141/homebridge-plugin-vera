@@ -2,13 +2,13 @@ module.exports = {
   serviceType: "lprf_network_1",
   variables: {
     NodeType: {
-      dataType: string
+      dataType: "string"
     },
     NodeId: {
-      dataType: ui4
+      dataType: "ui4"
     },
     Timeout: {
-      dataType: ui2
+      dataType: "ui2"
     }
   },
   actions: {

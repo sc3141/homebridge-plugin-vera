@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "ule_network_1",
   variables: {
     Address: {
-      dataType: string
+      dataType: "string"
     }
   },
   actions: {

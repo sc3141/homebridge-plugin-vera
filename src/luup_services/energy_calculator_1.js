@@ -2,22 +2,22 @@ module.exports = {
   serviceType: "energy_calculator_1",
   variables: {
     DaysOfWeek: {
-      dataType: string
+      dataType: "string"
     },
     Time: {
-      dataType: string
+      dataType: "string"
     },
     LightsOn: {
-      dataType: ui1
+      dataType: "ui1"
     },
     ThermostatOn: {
-      dataType: boolean
+      dataType: "boolean"
     },
     MaxWatts: {
-      dataType: ui4
+      dataType: "ui4"
     },
     Users: {
-      dataType: string
+      dataType: "string"
     }
   }};
 

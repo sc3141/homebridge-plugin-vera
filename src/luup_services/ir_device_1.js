@@ -2,20 +2,20 @@ module.exports = {
   serviceType: "ir_device_1",
   variables: {
     Codesets: {
-      dataType: string,
-      shortCode: codesets
+      dataType: "string",
+      shortCode: "codesets"
     },
     Codeset: {
-      dataType: string,
-      shortCode: codeset
+      dataType: "string",
+      shortCode: "codeset"
     },
     Remote: {
-      dataType: int,
-      shortCode: remote
+      dataType: "int",
+      shortCode: "remote"
     },
     Scene: {
-      dataType: string,
-      shortCode: scene
+      dataType: "string",
+      shortCode: "scene"
     }
   },
   actions: {

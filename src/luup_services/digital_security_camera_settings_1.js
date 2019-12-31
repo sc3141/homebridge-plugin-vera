@@ -2,34 +2,34 @@ module.exports = {
   serviceType: "digital_security_camera_settings_1",
   variables: {
     AutomaticWhiteBalance: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 1,
       eventable: true
     },
     FixedWhiteBalance: {
-      dataType: ui4,
+      dataType: "ui4",
       defVal: 3000,
       min: 0,
       max: 10000,
       eventable: true
     },
     AvailableRotations: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     DefaultRotation: {
-      dataType: string,
+      dataType: "string",
       eventable: true
     },
     Brightness: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 50,
       min: 0,
       max: 100,
       eventable: true
     },
     ColorSaturation: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 50,
       min: 0,
       max: 100,

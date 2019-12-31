@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "insteon_network_1",
   variables: {
     Node: {
-      dataType: string
+      dataType: "string"
     }
   },
   actions: {

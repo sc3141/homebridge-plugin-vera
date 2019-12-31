@@ -2,14 +2,14 @@ module.exports = {
   serviceType: "switch_power_1",
   variables: {
     Target: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
       eventable: false
     },
     Status: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
-      shortCode: status
+      shortCode: "status"
     }
   },
   actions: {

@@ -9,7 +9,7 @@ SCRIPT_DIR="$(dirname $SH_SCRIPT_DIR)"
 JQ_SCRIPT_DIR="${SCRIPT_DIR}/jq"
 NODE_SCRIPT_DIR="${SCRIPT_DIR}/node"
 REPO_DIR="$(dirname "${SCRIPT_DIR}")"
-VERA_SVC_TYPE_DIR="${REPO_DIR}/src/luup_servicegs"
+VERA_SVC_TYPE_DIR="${REPO_DIR}/src/luup_services"
 
 snakecase=${SH_SCRIPT_DIR}/snakecase.sh
 service_type_jq=${JQ_SCRIPT_DIR}/service_type.jq

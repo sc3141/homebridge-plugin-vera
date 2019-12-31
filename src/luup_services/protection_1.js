@@ -2,19 +2,19 @@ module.exports = {
   serviceType: "protection_1",
   variables: {
     LocalProtectionStateTarget: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     LocalProtectionState: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     RFProtectionStateTarget: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     RFProtectionState: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     }
   },

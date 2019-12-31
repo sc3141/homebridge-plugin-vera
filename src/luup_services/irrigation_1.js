@@ -2,29 +2,29 @@ module.exports = {
   serviceType: "irrigation_1",
   variables: {
     SystemConfig: {
-      dataType: string
+      dataType: "string"
     },
     ValveId: {
-      dataType: ui1
+      dataType: "ui1"
     },
     MasterValve: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0
     },
     ValveConfig: {
-      dataType: string
+      dataType: "string"
     },
     Duration: {
-      dataType: ui2
+      dataType: "ui2"
     },
     ValveTable: {
-      dataType: string
+      dataType: "string"
     },
     ValveTableId: {
-      dataType: ui1
+      dataType: "ui1"
     },
     ValveTablesToRun: {
-      dataType: string
+      dataType: "string"
     }
   },
   actions: {

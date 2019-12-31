@@ -2,20 +2,20 @@ module.exports = {
   serviceType: "color_1",
   variables: {
     CurrentColor: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     TargetColor: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     SupportedColors: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     ColorChannelPriorities: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       eventable: false
     }
   },

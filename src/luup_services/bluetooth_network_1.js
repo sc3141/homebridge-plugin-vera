@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "bluetooth_network_1",
   variables: {
     Address: {
-      dataType: string
+      dataType: "string"
     }
   },
   actions: {

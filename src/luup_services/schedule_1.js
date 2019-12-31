@@ -2,19 +2,19 @@ module.exports = {
   serviceType: "schedule_1",
   variables: {
     Schedule: {
-      dataType: string
+      dataType: "string"
     },
     ScheduleBlockId: {
-      dataType: ui1
+      dataType: "ui1"
     },
     ScheduleState: {
-      dataType: ui1
+      dataType: "ui1"
     },
     Duration: {
-      dataType: ui2
+      dataType: "ui2"
     },
     ScheduleId: {
-      dataType: ui1
+      dataType: "ui1"
     }
   },
   actions: {

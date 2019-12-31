@@ -2,39 +2,39 @@ module.exports = {
   serviceType: "zigbee_network_1",
   variables: {
     PanID: {
-      dataType: string
+      dataType: "string"
     },
     Duration: {
-      dataType: ui4
+      dataType: "ui4"
     },
     Node: {
-      dataType: ui1,
+      dataType: "ui1",
       min: 0,
       max: 255
     },
     FrameControl: {
-      dataType: ui1,
+      dataType: "ui1",
       min: 0,
       max: 255
     },
     Cluster: {
-      dataType: ui2,
+      dataType: "ui2",
       min: 0,
       max: 65535
     },
     Command: {
-      dataType: ui1,
+      dataType: "ui1",
       min: 0,
       max: 255
     },
     ManufacturerCode: {
-      dataType: ui2,
+      dataType: "ui2",
       defVal: 0,
       min: 0,
       max: 65535
     },
     NetStatusText: {
-      dataType: string
+      dataType: "string"
     }
   },
   actions: {

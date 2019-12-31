@@ -2,19 +2,19 @@ module.exports = {
   serviceType: "z_wave_network_1",
   variables: {
     NetStatusID: {
-      dataType: ui1
+      dataType: "ui1"
     },
     NetStatusText: {
-      dataType: string
+      dataType: "string"
     },
     ActiveScenes: {
-      dataType: string
+      dataType: "string"
     },
     LastError: {
-      dataType: string
+      dataType: "string"
     },
     ResetMode: {
-      dataType: string,
+      dataType: "string",
       defVal: "SIS",
       values: [
         "SIS",
@@ -23,7 +23,7 @@ module.exports = {
       ]
     },
     InclusionMode: {
-      dataType: string,
+      dataType: "string",
       defVal: "LowPower",
       values: [
         "LowPower",
@@ -32,7 +32,7 @@ module.exports = {
       ]
     },
     NodeType: {
-      dataType: string,
+      dataType: "string",
       defVal: "Any",
       values: [
         "Any",
@@ -42,53 +42,53 @@ module.exports = {
       ]
     },
     Timeout: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 30,
       min: 0,
       max: 600
     },
     Multiple: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0
     },
     Node: {
-      dataType: ui1,
+      dataType: "ui1",
       min: 0,
       max: 255
     },
     Device: {
-      dataType: ui4
+      dataType: "ui4"
     },
     PollingEnabled: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 1
     },
     PollDelayInitial: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 10,
       min: 0,
       max: 600
     },
     PollDelayDeadTime: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 10,
       min: 0,
       max: 600
     },
     PollMinDelay: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 60,
       min: 0,
       max: 600
     },
     PollFrequency: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 10,
       min: 0,
       max: 600
     },
     Reload: {
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 1
     }
   },

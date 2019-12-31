@@ -2,35 +2,35 @@ module.exports = {
   serviceType: "digital_security_camera_still_image_1",
   variables: {
     AvailableEncodings: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     DefaultEncoding: {
-      dataType: string,
+      dataType: "string",
       eventable: true
     },
     AvailableCompressionLevels: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     DefaultCompressionLevel: {
-      dataType: string,
+      dataType: "string",
       eventable: true
     },
     AvailableResolutions: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     DefaultResolution: {
-      dataType: string,
+      dataType: "string",
       eventable: true
     },
     ImageURL: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     ImagePresentationURL: {
-      dataType: string,
+      dataType: "string",
       eventable: false
     }
   },

@@ -2,22 +2,22 @@ module.exports = {
   serviceType: "dimming_1",
   variables: {
     LoadLevelTarget: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100,
       eventable: false
     },
     LoadLevelStatus: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100,
-      shortCode: level,
+      shortCode: "level",
       eventable: true
     },
     MinLevel: {
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100,
@@ -25,7 +25,7 @@ module.exports = {
     },
     OnEffectLevel: {
       optional: true,
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 100,
       min: 0,
       max: 100,
@@ -33,7 +33,7 @@ module.exports = {
     },
     OnEffect: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       defVal: "Default",
       values: [
         "OnEffectLevel",
@@ -44,12 +44,12 @@ module.exports = {
     },
     ValidOutputValues: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       eventable: false
     },
     StepDelta: {
       optional: true,
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 1,
       max: 100,
@@ -57,7 +57,7 @@ module.exports = {
     },
     RampRate: {
       optional: true,
-      dataType: ui1,
+      dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100,
@@ -65,7 +65,7 @@ module.exports = {
     },
     RampTime: {
       optional: true,
-      dataType: ui4,
+      dataType: "ui4",
       defVal: 0,
       min: 0,
       max: 4294967295,
@@ -73,24 +73,24 @@ module.exports = {
     },
     IsRamping: {
       optional: true,
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     RampPaused: {
       optional: true,
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     TurnOnBeforeDim: {
       optional: true,
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 1
     },
     AllowZeroLevel: {
       optional: true,
-      dataType: boolean,
+      dataType: "boolean",
       defVal: 0
     }
   },

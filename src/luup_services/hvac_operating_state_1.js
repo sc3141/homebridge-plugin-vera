@@ -2,7 +2,7 @@ module.exports = {
   serviceType: "hvac_operating_state_1",
   variables: {
     ModeState: {
-      dataType: string,
+      dataType: "string",
       defVal: "Off",
       values: [
         "Idle",
@@ -13,7 +13,7 @@ module.exports = {
         "PendingCool",
         "Vent"
       ],
-      shortCode: hvacstate
+      shortCode: "hvacstate"
     }
   }};
 

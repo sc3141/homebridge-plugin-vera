@@ -2,27 +2,27 @@ module.exports = {
   serviceType: "hvac_fan_operating_mode_1",
   variables: {
     Mode: {
-      dataType: string,
+      dataType: "string",
       defVal: "Auto",
       values: [
         "Auto",
         "ContinuousOn",
         "PeriodicOn"
       ],
-      shortCode: fanmode
+      shortCode: "fanmode"
     },
     FanStatus: {
-      dataType: string,
+      dataType: "string",
       defVal: "On",
       values: [
         "On",
         "Off"
       ],
-      shortCode: fan
+      shortCode: "fan"
     },
     Name: {
       optional: true,
-      dataType: string,
+      dataType: "string",
       defVal: ""
     }
   },
