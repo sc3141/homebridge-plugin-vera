@@ -11,8 +11,7 @@ module.exports = {
         Lightbulb: {
           On: {
             action: "SetTarget",
-            get: on_off.get,
-            set: on_off.set
+            conversion: on_off
           }
         }
       }
