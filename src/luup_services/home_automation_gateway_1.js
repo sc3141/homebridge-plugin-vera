@@ -2,9 +2,11 @@ module.exports = {
   serviceType: "home_automation_gateway_1",
   variables: {
     UserData: {
+      name: "UserData",
       dataType: "string"
     },
     DataFormat: {
+      name: "DataFormat",
       dataType: "string",
       defVal: "xml",
       values: [
@@ -13,24 +15,31 @@ module.exports = {
       ]
     },
     DeviceNum: {
+      name: "DeviceNum",
       dataType: "ui4"
     },
     DataVersion: {
+      name: "DataVersion",
       dataType: "ui4"
     },
     UDN: {
+      name: "UDN",
       dataType: "string"
     },
     ActiveScenes: {
+      name: "ActiveScenes",
       dataType: "string"
     },
     DataVersionUserData: {
+      name: "DataVersionUserData",
       dataType: "ui4"
     },
     DataVersionStatus: {
+      name: "DataVersionStatus",
       dataType: "ui4"
     },
     Reload: {
+      name: "Reload",
       dataType: "boolean",
       defVal: 1
     }
@@ -38,131 +47,131 @@ module.exports = {
   actions: {
     Reload: {},
     GetUserData: {
-      out: {
-        UserData: "UserData",
-        DataFormat: "DataFormat",
-        DataVersion: "DataVersion"
-      }
+      out: [
+        { name: "UserData", stateVar: "UserData" },
+        { name: "DataFormat", stateVar: "DataFormat" },
+        { name: "DataVersion", stateVar: "DataVersion" }
+      ]
     },
     ModifyUserData: {
-      out: {
-        inUserData: "UserData",
-        UserData: "UserData",
-        DataFormat: "DataFormat",
-        Reload: "Reload"
-      }
+      out: [
+        { name: "inUserData", stateVar: "UserData" },
+        { name: "UserData", stateVar: "UserData" },
+        { name: "DataFormat", stateVar: "DataFormat" },
+        { name: "Reload", stateVar: "Reload" }
+      ]
     },
     SetVariable: {
-      out: {
-        DeviceNum: "DeviceNum",
-        UDN: "UDN",
-        Service: "UserData",
-        Variable: "UserData",
-        Value: "UserData"
-      }
+      out: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" },
+        { name: "Service", stateVar: "UserData" },
+        { name: "Variable", stateVar: "UserData" },
+        { name: "Value", stateVar: "UserData" }
+      ]
     },
     GetVariable: {
-      out: {
-        DeviceNum: "DeviceNum",
-        UDN: "UDN",
-        Service: "UserData",
-        Variable: "UserData",
-        Value: "UserData"
-      }
+      out: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" },
+        { name: "Service", stateVar: "UserData" },
+        { name: "Variable", stateVar: "UserData" },
+        { name: "Value", stateVar: "UserData" }
+      ]
     },
     GetStatus: {
-      out: {
-        Status: "UserData",
-        DataFormat: "DataFormat",
-        DeviceNum: "DeviceNum",
-        UDN: "UDN"
-      }
+      out: [
+        { name: "Status", stateVar: "UserData" },
+        { name: "DataFormat", stateVar: "DataFormat" },
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" }
+      ]
     },
     GetActions: {
-      out: {
-        DeviceNum: "DeviceNum",
-        UDN: "UDN",
-        DataFormat: "DataFormat",
-        Actions: "UserData"
-      }
+      out: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" },
+        { name: "DataFormat", stateVar: "DataFormat" },
+        { name: "Actions", stateVar: "UserData" }
+      ]
     },
     RunScene: {
-      in: {
-        SceneNum: "DeviceNum"
-      }
+      in: [
+        { name: "SceneNum", stateVar: "DeviceNum" }
+      ]
     },
     SceneOff: {
-      in: {
-        SceneNum: "DeviceNum"
-      }
+      in: [
+        { name: "SceneNum", stateVar: "DeviceNum" }
+      ]
     },
     SetHouseMode: {
-      in: {
-        Mode: "DeviceNum"
-      }
+      in: [
+        { name: "Mode", stateVar: "DeviceNum" }
+      ]
     },
     RunLua: {
-      in: {
-        DeviceNum: "DeviceNum",
-        Code: "UDN"
-      }
+      in: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "Code", stateVar: "UDN" }
+      ]
     },
     ProcessChildDevices: {
-      in: {
-        DeviceNumParent: "DeviceNum",
-        DeviceList: "UDN"
-      }
+      in: [
+        { name: "DeviceNumParent", stateVar: "DeviceNum" },
+        { name: "DeviceList", stateVar: "UDN" }
+      ]
     },
     CreateDevice: {
-      out: {
-        DeviceNum: "DeviceNum",
-        deviceType: "UDN",
-        internalID: "UDN",
-        Description: "UDN",
-        UpnpDevFilename: "UDN",
-        UpnpImplFilename: "UDN",
-        IpAddress: "UDN",
-        MacAddress: "UDN",
-        DeviceNumParent: "DeviceNum",
-        RoomNum: "DeviceNum",
-        StateVariables: "UDN"
-      }
+      out: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "deviceType", stateVar: "UDN" },
+        { name: "internalID", stateVar: "UDN" },
+        { name: "Description", stateVar: "UDN" },
+        { name: "UpnpDevFilename", stateVar: "UDN" },
+        { name: "UpnpImplFilename", stateVar: "UDN" },
+        { name: "IpAddress", stateVar: "UDN" },
+        { name: "MacAddress", stateVar: "UDN" },
+        { name: "DeviceNumParent", stateVar: "DeviceNum" },
+        { name: "RoomNum", stateVar: "DeviceNum" },
+        { name: "StateVariables", stateVar: "UDN" }
+      ]
     },
     DeleteDevice: {
-      in: {
-        DeviceNum: "DeviceNum",
-        UDN: "UDN"
-      }
+      in: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" }
+      ]
     },
     CreatePlugin: {
-      in: {
-        PluginNum: "DeviceNum",
-        StateVariables: "UDN"
-      }
+      in: [
+        { name: "PluginNum", stateVar: "DeviceNum" },
+        { name: "StateVariables", stateVar: "UDN" }
+      ]
     },
     DeletePlugin: {
-      in: {
-        PluginNum: "DeviceNum"
-      }
+      in: [
+        { name: "PluginNum", stateVar: "DeviceNum" }
+      ]
     },
     CreatePluginDevice: {
-      in: {
-        PluginNum: "DeviceNum",
-        StateVariables: "UDN"
-      }
+      in: [
+        { name: "PluginNum", stateVar: "DeviceNum" },
+        { name: "StateVariables", stateVar: "UDN" }
+      ]
     },
     ImportUpnpDevice: {
-      out: {
-        DeviceNum: "DeviceNum",
-        UDN: "UDN",
-        RoomNum: "DeviceNum"
-      }
+      out: [
+        { name: "DeviceNum", stateVar: "DeviceNum" },
+        { name: "UDN", stateVar: "UDN" },
+        { name: "RoomNum", stateVar: "DeviceNum" }
+      ]
     },
     LogIpRequest: {
-      in: {
-        IpAddress: "UDN",
-        MacAddress: "UDN"
-      }
+      in: [
+        { name: "IpAddress", stateVar: "UDN" },
+        { name: "MacAddress", stateVar: "UDN" }
+      ]
     }
   }
 };

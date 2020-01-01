@@ -2,49 +2,50 @@ module.exports = {
   serviceType: "ule_network_1",
   variables: {
     Address: {
+      name: "Address",
       dataType: "string"
     }
   },
   actions: {
     OpenRegistration: {
-      in: {
-        Mode: null,
-        Duration: null
-      }
+      in: [
+        { name: "Mode" },
+        { name: "Duration" }
+      ]
     },
     GetAttribute: {
-      in: {
-        DeviceId: null,
-        UnitId: null,
-        Interface: null,
-        Attribute: null
-      }
+      in: [
+        { name: "DeviceId" },
+        { name: "UnitId" },
+        { name: "Interface" },
+        { name: "Attribute" }
+      ]
     },
     GetAllAttributes: {
-      in: {
-        DeviceId: null,
-        UnitId: null,
-        Interface: null
-      }
+      in: [
+        { name: "DeviceId" },
+        { name: "UnitId" },
+        { name: "Interface" }
+      ]
     },
     SetAttribute: {
-      in: {
-        DeviceId: null,
-        UnitId: null,
-        Interface: null,
-        Attribute: null,
-        Value: null
-      }
+      in: [
+        { name: "DeviceId" },
+        { name: "UnitId" },
+        { name: "Interface" },
+        { name: "Attribute" },
+        { name: "Value" }
+      ]
     },
     GetDeviceInfo: {
-      in: {
-        DeviceId: null
-      }
+      in: [
+        { name: "DeviceId" }
+      ]
     },
     DeleteDevice: {
-      in: {
-        DeviceId: null
-      }
+      in: [
+        { name: "DeviceId" }
+      ]
     },
     GetDevices: {}
   }

@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "job_handler_1",
   variables: {
     NumActiveJobs: {
+      name: "NumActiveJobs",
       dataType: "ui1",
       defVal: 0,
       min: 0,
@@ -11,9 +12,9 @@ module.exports = {
   },
   actions: {
     SetLoadLevelTarget: {
-      in: {
-        newLoadlevelTarget: "LoadLevelTarget"
-      }
+      in: [
+        { name: "newLoadlevelTarget", stateVar: "LoadLevelTarget" }
+      ]
     }
   }
 };

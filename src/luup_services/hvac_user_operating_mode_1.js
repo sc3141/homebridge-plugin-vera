@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "hvac_user_operating_mode_1",
   variables: {
     ModeTarget: {
+      name: "ModeTarget",
       dataType: "string",
       defVal: "Off",
       values: [
@@ -19,6 +20,7 @@ module.exports = {
       ]
     },
     ModeStatus: {
+      name: "ModeStatus",
       dataType: "string",
       defVal: "Off",
       values: [
@@ -39,6 +41,7 @@ module.exports = {
       shortCode: "mode"
     },
     EnergyModeTarget: {
+      name: "EnergyModeTarget",
       dataType: "string",
       defVal: "Normal",
       values: [
@@ -47,6 +50,7 @@ module.exports = {
       ]
     },
     EnergyModeStatus: {
+      name: "EnergyModeStatus",
       dataType: "string",
       defVal: "Normal",
       values: [
@@ -55,46 +59,48 @@ module.exports = {
       ]
     },
     Name: {
+      name: "Name",
       optional: true,
       dataType: "string",
       defVal: ""
     },
     A_ARG_TYPE_r4: {
+      name: "A_ARG_TYPE_r4",
       dataType: "r4"
     }
   },
   actions: {
     SetModeTarget: {
-      in: {
-        NewModeTarget: "ModeTarget",
-        NewHeatSetpoint: "A_ARG_TYPE_r4",
-        NewCoolSetpoint: "A_ARG_TYPE_r4"
-      }
+      in: [
+        { name: "NewModeTarget", stateVar: "ModeTarget" },
+        { name: "NewHeatSetpoint", stateVar: "A_ARG_TYPE_r4" },
+        { name: "NewCoolSetpoint", stateVar: "A_ARG_TYPE_r4" }
+      ]
     },
     SetEnergyModeTarget: {
-      in: {
-        NewModeTarget: "EnergyModeTarget"
-      }
+      in: [
+        { name: "NewModeTarget", stateVar: "EnergyModeTarget" }
+      ]
     },
     GetModeTarget: {
-      out: {
-        CurrentModeTarget: "ModeTarget"
-      }
+      out: [
+        { name: "CurrentModeTarget", stateVar: "ModeTarget" }
+      ]
     },
     GetModeStatus: {
-      out: {
-        CurrentModeStatus: "ModeStatus"
-      }
+      out: [
+        { name: "CurrentModeStatus", stateVar: "ModeStatus" }
+      ]
     },
     GetName: {
-      out: {
-        CurrentName: "Name"
-      }
+      out: [
+        { name: "CurrentName", stateVar: "Name" }
+      ]
     },
     SetName: {
-      in: {
-        NewName: "Name"
-      }
+      in: [
+        { name: "NewName", stateVar: "Name" }
+      ]
     }
   }
 };

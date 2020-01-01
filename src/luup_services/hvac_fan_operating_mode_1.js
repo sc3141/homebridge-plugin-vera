@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "hvac_fan_operating_mode_1",
   variables: {
     Mode: {
+      name: "Mode",
       dataType: "string",
       defVal: "Auto",
       values: [
@@ -12,6 +13,7 @@ module.exports = {
       shortCode: "fanmode"
     },
     FanStatus: {
+      name: "FanStatus",
       dataType: "string",
       defVal: "On",
       values: [
@@ -21,6 +23,7 @@ module.exports = {
       shortCode: "fan"
     },
     Name: {
+      name: "Name",
       optional: true,
       dataType: "string",
       defVal: ""
@@ -28,29 +31,29 @@ module.exports = {
   },
   actions: {
     SetMode: {
-      in: {
-        NewMode: "Mode"
-      }
+      in: [
+        { name: "NewMode", stateVar: "Mode" }
+      ]
     },
     GetMode: {
-      out: {
-        CurrentMode: "Mode"
-      }
+      out: [
+        { name: "CurrentMode", stateVar: "Mode" }
+      ]
     },
     GetFanStatus: {
-      out: {
-        CurrentStatus: "FanStatus"
-      }
+      out: [
+        { name: "CurrentStatus", stateVar: "FanStatus" }
+      ]
     },
     GetName: {
-      out: {
-        CurrentName: "Name"
-      }
+      out: [
+        { name: "CurrentName", stateVar: "Name" }
+      ]
     },
     SetName: {
-      in: {
-        NewName: "Name"
-      }
+      in: [
+        { name: "NewName", stateVar: "Name" }
+      ]
     }
   }
 };

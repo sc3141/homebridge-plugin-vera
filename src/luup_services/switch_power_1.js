@@ -2,11 +2,13 @@ module.exports = {
   serviceType: "switch_power_1",
   variables: {
     Target: {
+      name: "Target",
       dataType: "boolean",
       defVal: 0,
       eventable: false
     },
     Status: {
+      name: "Status",
       dataType: "boolean",
       defVal: 0,
       shortCode: "status"
@@ -14,19 +16,19 @@ module.exports = {
   },
   actions: {
     SetTarget: {
-      in: {
-        newTargetValue: "Target"
-      }
+      in: [
+        { name: "newTargetValue", stateVar: "Target" }
+      ]
     },
     GetTarget: {
-      out: {
-        RetTargetValue: "Target"
-      }
+      out: [
+        { name: "RetTargetValue", stateVar: "Target" }
+      ]
     },
     GetStatus: {
-      out: {
-        ResultStatus: "Status"
-      }
+      out: [
+        { name: "ResultStatus", stateVar: "Status" }
+      ]
     }
   }
 };

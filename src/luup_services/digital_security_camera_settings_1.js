@@ -2,11 +2,13 @@ module.exports = {
   serviceType: "digital_security_camera_settings_1",
   variables: {
     AutomaticWhiteBalance: {
+      name: "AutomaticWhiteBalance",
       dataType: "boolean",
       defVal: 1,
       eventable: true
     },
     FixedWhiteBalance: {
+      name: "FixedWhiteBalance",
       dataType: "ui4",
       defVal: 3000,
       min: 0,
@@ -14,14 +16,17 @@ module.exports = {
       eventable: true
     },
     AvailableRotations: {
+      name: "AvailableRotations",
       dataType: "string",
       eventable: false
     },
     DefaultRotation: {
+      name: "DefaultRotation",
       dataType: "string",
       eventable: true
     },
     Brightness: {
+      name: "Brightness",
       dataType: "ui1",
       defVal: 50,
       min: 0,
@@ -29,6 +34,7 @@ module.exports = {
       eventable: true
     },
     ColorSaturation: {
+      name: "ColorSaturation",
       dataType: "ui1",
       defVal: 50,
       min: 0,
@@ -38,61 +44,61 @@ module.exports = {
   },
   actions: {
     SetAutomaticWhiteBalance: {
-      in: {
-        NewAutomaticWhiteBalance: "AutomaticWhiteBalance"
-      }
+      in: [
+        { name: "NewAutomaticWhiteBalance", stateVar: "AutomaticWhiteBalance" }
+      ]
     },
     GetAutomaticWhiteBalance: {
-      out: {
-        RetAutomaticWhiteBalance: "AutomaticWhiteBalance"
-      }
+      out: [
+        { name: "RetAutomaticWhiteBalance", stateVar: "AutomaticWhiteBalance" }
+      ]
     },
     SetFixedWhiteBalance: {
-      in: {
-        NewFixedWhiteBalance: "FixedWhiteBalance"
-      }
+      in: [
+        { name: "NewFixedWhiteBalance", stateVar: "FixedWhiteBalance" }
+      ]
     },
     GetFixedWhiteBalance: {
-      out: {
-        RetFixedWhiteBalance: "FixedWhiteBalance"
-      }
+      out: [
+        { name: "RetFixedWhiteBalance", stateVar: "FixedWhiteBalance" }
+      ]
     },
     GetAvailableRotations: {
-      out: {
-        RetAvailableRotations: "AvailableRotations"
-      }
+      out: [
+        { name: "RetAvailableRotations", stateVar: "AvailableRotations" }
+      ]
     },
     SetDefaultRotation: {
-      in: {
-        NewRotation: "DefaultRotation"
-      }
+      in: [
+        { name: "NewRotation", stateVar: "DefaultRotation" }
+      ]
     },
     GetDefaultRotation: {
-      out: {
-        RetRotation: "DefaultRotation"
-      }
+      out: [
+        { name: "RetRotation", stateVar: "DefaultRotation" }
+      ]
     },
     SetBrightness: {
-      in: {
-        NewBrightness: "Brightness"
-      }
+      in: [
+        { name: "NewBrightness", stateVar: "Brightness" }
+      ]
     },
     GetBrightness: {
-      out: {
-        RetBrightness: "Brightness"
-      }
+      out: [
+        { name: "RetBrightness", stateVar: "Brightness" }
+      ]
     },
     IncreaseBrightness: {},
     DecreaseBrightness: {},
     SetColorSaturation: {
-      in: {
-        NewColorSaturation: "ColorSaturation"
-      }
+      in: [
+        { name: "NewColorSaturation", stateVar: "ColorSaturation" }
+      ]
     },
     GetColorSaturation: {
-      out: {
-        RetColorSaturation: "ColorSaturation"
-      }
+      out: [
+        { name: "RetColorSaturation", stateVar: "ColorSaturation" }
+      ]
     },
     IncreaseColorSaturation: {},
     DecreaseColorSaturation: {}

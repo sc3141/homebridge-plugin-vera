@@ -2,19 +2,20 @@ module.exports = {
   serviceType: "bluetooth_network_1",
   variables: {
     Address: {
+      name: "Address",
       dataType: "string"
     }
   },
   actions: {
     Scan: {
-      in: {
-        Duration: null
-      }
+      in: [
+        { name: "Duration" }
+      ]
     },
     Add: {
-      in: {
-        Address: null
-      }
+      in: [
+        { name: "Address" }
+      ]
     },
     ScanResults: {}
   }

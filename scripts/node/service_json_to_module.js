@@ -9,6 +9,7 @@ processStateVars = function(json, indent) {
     for(let name of Object.keys(json.stateVariables)) {
       let varDef = json.stateVariables[name];
       let attrs = [];
+      attrs.push(`name: "${name}"`);
 
       if (varDef.hasOwnProperty("optional")) attrs.push(`optional: ${varDef.optional}`);
       if (varDef.hasOwnProperty("dataType")) attrs.push(`dataType: "${varDef.dataType}"`);
@@ -51,18 +52,18 @@ processStateVars = function(json, indent) {
 
 processArgs = function(argGroups, groupName, actionDef) {
   if (actionDef.args.hasOwnProperty(groupName)) {
-    let groupString = `      ${groupName}: {\n`;
+    let groupString = `      ${groupName}: [\n`;
     let groupArgs = [];
     for (let argName in actionDef.args[groupName]) {
       let argDef = actionDef.args[groupName][argName]
       if (argDef.var)
-        groupArgs.push(`        ${argName}: "${argDef.var}"`);
+        groupArgs.push(`        { name: "${argName}", stateVar: "${argDef.var}" }`);
       else
-        groupArgs.push(`        ${argName}: null`);
+        groupArgs.push(`        { name: "${argName}" }`);
 
     }
     groupString    += groupArgs.join(`,\n`);
-    groupString    += `\n      }`;
+    groupString    += `\n      ]`;
     argGroups.push(groupString);
   }
 }

@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "temperature_sensor_1",
   variables: {
     CurrentTemperature: {
+      name: "CurrentTemperature",
       dataType: "i4",
       defVal: 2000,
       min: 0,
@@ -10,6 +11,7 @@ module.exports = {
       eventable: true
     },
     Application: {
+      name: "Application",
       dataType: "string",
       defVal: "Room",
       values: [
@@ -21,6 +23,7 @@ module.exports = {
       eventable: true
     },
     Name: {
+      name: "Name",
       optional: true,
       dataType: "string",
       defVal: "",
@@ -29,29 +32,29 @@ module.exports = {
   },
   actions: {
     GetApplication: {
-      out: {
-        CurrentApplication: "Application"
-      }
+      out: [
+        { name: "CurrentApplication", stateVar: "Application" }
+      ]
     },
     SetApplication: {
-      in: {
-        NewApplication: "Application"
-      }
+      in: [
+        { name: "NewApplication", stateVar: "Application" }
+      ]
     },
     GetCurrentTemperature: {
-      out: {
-        CurrentTemp: "CurrentTemperature"
-      }
+      out: [
+        { name: "CurrentTemp", stateVar: "CurrentTemperature" }
+      ]
     },
     GetName: {
-      out: {
-        CurrentName: "Name"
-      }
+      out: [
+        { name: "CurrentName", stateVar: "Name" }
+      ]
     },
     SetName: {
-      in: {
-        NewName: "Name"
-      }
+      in: [
+        { name: "NewName", stateVar: "Name" }
+      ]
     }
   }
 };

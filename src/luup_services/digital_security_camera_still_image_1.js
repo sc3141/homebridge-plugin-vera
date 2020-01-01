@@ -2,109 +2,117 @@ module.exports = {
   serviceType: "digital_security_camera_still_image_1",
   variables: {
     AvailableEncodings: {
+      name: "AvailableEncodings",
       dataType: "string",
       eventable: false
     },
     DefaultEncoding: {
+      name: "DefaultEncoding",
       dataType: "string",
       eventable: true
     },
     AvailableCompressionLevels: {
+      name: "AvailableCompressionLevels",
       dataType: "string",
       eventable: false
     },
     DefaultCompressionLevel: {
+      name: "DefaultCompressionLevel",
       dataType: "string",
       eventable: true
     },
     AvailableResolutions: {
+      name: "AvailableResolutions",
       dataType: "string",
       eventable: false
     },
     DefaultResolution: {
+      name: "DefaultResolution",
       dataType: "string",
       eventable: true
     },
     ImageURL: {
+      name: "ImageURL",
       dataType: "string",
       eventable: false
     },
     ImagePresentationURL: {
+      name: "ImagePresentationURL",
       dataType: "string",
       eventable: false
     }
   },
   actions: {
     GetAvailableEncodings: {
-      out: {
-        RetAvailableEncodings: "AvailableEncodings"
-      }
+      out: [
+        { name: "RetAvailableEncodings", stateVar: "AvailableEncodings" }
+      ]
     },
     GetDefaultEncoding: {
-      out: {
-        RetEncoding: "DefaultEncoding"
-      }
+      out: [
+        { name: "RetEncoding", stateVar: "DefaultEncoding" }
+      ]
     },
     SetDefaultEncoding: {
-      in: {
-        ReqEncoding: "DefaultEncoding"
-      }
+      in: [
+        { name: "ReqEncoding", stateVar: "DefaultEncoding" }
+      ]
     },
     GetAvailableCompressionLevels: {
-      out: {
-        RetAvailableCompressionLevels: "AvailableCompressionLevels"
-      }
+      out: [
+        { name: "RetAvailableCompressionLevels", stateVar: "AvailableCompressionLevels" }
+      ]
     },
     GetDefaultCompressionLevel: {
-      out: {
-        RetCompressionLevel: "DefaultCompressionLevel"
-      }
+      out: [
+        { name: "RetCompressionLevel", stateVar: "DefaultCompressionLevel" }
+      ]
     },
     SetDefaultCompressionLevel: {
-      in: {
-        ReqCompressionLevel: "DefaultCompressionLevel"
-      }
+      in: [
+        { name: "ReqCompressionLevel", stateVar: "DefaultCompressionLevel" }
+      ]
     },
     GetAvailableResolutions: {
-      out: {
-        RetAvailableResolutions: "AvailableResolutions"
-      }
+      out: [
+        { name: "RetAvailableResolutions", stateVar: "AvailableResolutions" }
+      ]
     },
     GetDefaultResolution: {
-      out: {
-        RetResolution: "DefaultResolution"
-      }
+      out: [
+        { name: "RetResolution", stateVar: "DefaultResolution" }
+      ]
     },
     SetDefaultResolution: {
-      in: {
-        ReqResolution: "DefaultResolution"
-      }
+      in: [
+        { name: "ReqResolution", stateVar: "DefaultResolution" }
+      ]
     },
     GetImageURL: {
-      out: {
-        ReqEncoding: "DefaultEncoding",
-        ReqCompression: "DefaultCompressionLevel",
-        ReqResolution: "DefaultResolution",
-        RetImageURL: "ImageURL"
-      }
+      out: [
+        { name: "ReqEncoding", stateVar: "DefaultEncoding" },
+        { name: "ReqCompression", stateVar: "DefaultCompressionLevel" },
+        { name: "ReqResolution", stateVar: "DefaultResolution" },
+        { name: "RetImageURL", stateVar: "ImageURL" }
+      ]
     },
     GetDefaultImageURL: {
-      out: {
-        RetImageURL: "ImageURL"
-      }
+      out: [
+        { name: "RetImageURL", stateVar: "ImageURL" }
+      ]
     },
     GetImagePresentationURL: {
-      out: {
-        ReqEncoding: "DefaultEncoding",
-        ReqCompression: "DefaultCompressionLevel",
-        ReqResolution: "DefaultResolution",
-        RetImagePresentationURL: "ImagePresentationURL"
-      }
+      out: [
+        { name: "ReqEncoding", stateVar: "DefaultEncoding" },
+        { name: "ReqCompression", stateVar: "DefaultCompressionLevel" },
+        { name: "ReqResolution", stateVar: "DefaultResolution" },
+        { name: "RetImagePresentationURL", stateVar: "ImagePresentationURL" }
+      ]
     },
     GetDefaultImagePresentationURL: {
-      out: {
-        RetImagePresentationURL: "ImagePresentationURL"
-      }
+      out: [
+        { name: "RetImagePresentationURL", stateVar: "ImagePresentationURL" }
+      ]
     }
   }
 };

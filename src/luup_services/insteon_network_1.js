@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "insteon_network_1",
   variables: {
     Node: {
+      name: "Node",
       dataType: "string"
     }
   },
@@ -11,10 +12,10 @@ module.exports = {
     AddNodes: {},
     StopAddRemoveNodes: {},
     SendData: {
-      in: {
-        Node: "Node",
-        Data: "Node"
-      }
+      in: [
+        { name: "Node", stateVar: "Node" },
+        { name: "Data", stateVar: "Node" }
+      ]
     }
   }
 };

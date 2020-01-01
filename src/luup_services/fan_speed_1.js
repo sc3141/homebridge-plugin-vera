@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "fan_speed_1",
   variables: {
     FanSpeedTarget: {
+      name: "FanSpeedTarget",
       dataType: "ui1",
       defVal: 0,
       min: 0,
@@ -9,18 +10,21 @@ module.exports = {
       eventable: false
     },
     FanSpeedStatus: {
+      name: "FanSpeedStatus",
       dataType: "ui1",
       defVal: 0,
       min: 0,
       max: 100
     },
     DirectionTarget: {
+      name: "DirectionTarget",
       optional: true,
       dataType: "boolean",
       defVal: 0,
       eventable: false
     },
     DirectionStatus: {
+      name: "DirectionStatus",
       optional: true,
       dataType: "boolean",
       defVal: 0
@@ -28,34 +32,34 @@ module.exports = {
   },
   actions: {
     SetFanSpeed: {
-      in: {
-        NewFanSpeedTarget: "FanSpeedTarget"
-      }
+      in: [
+        { name: "NewFanSpeedTarget", stateVar: "FanSpeedTarget" }
+      ]
     },
     GetFanSpeed: {
-      out: {
-        CurrentFanSpeedStatus: "FanSpeedStatus"
-      }
+      out: [
+        { name: "CurrentFanSpeedStatus", stateVar: "FanSpeedStatus" }
+      ]
     },
     GetFanSpeedTarget: {
-      out: {
-        CurrentFanSpeedTarget: "FanSpeedTarget"
-      }
+      out: [
+        { name: "CurrentFanSpeedTarget", stateVar: "FanSpeedTarget" }
+      ]
     },
     SetFanDirection: {
-      in: {
-        NewDirectionTarget: "DirectionTarget"
-      }
+      in: [
+        { name: "NewDirectionTarget", stateVar: "DirectionTarget" }
+      ]
     },
     GetFanDirection: {
-      out: {
-        CurrentDirectionStatus: "DirectionStatus"
-      }
+      out: [
+        { name: "CurrentDirectionStatus", stateVar: "DirectionStatus" }
+      ]
     },
     GetFanDirectionTarget: {
-      out: {
-        CurrentDirectionTarget: "DirectionTarget"
-      }
+      out: [
+        { name: "CurrentDirectionTarget", stateVar: "DirectionTarget" }
+      ]
     }
   }
 };

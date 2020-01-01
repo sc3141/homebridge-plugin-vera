@@ -11,14 +11,14 @@ module.exports = {
     VerticalPatrol: {},
     StopPatrol: {},
     GoToPreset: {
-      in: {
-        presetNumber: "ui1"
-      }
+      in: [
+        { name: "presetNumber", stateVar: "ui1" }
+      ]
     },
     SetPreset: {
-      in: {
-        presetNumber: "ui1"
-      }
+      in: [
+        { name: "presetNumber", stateVar: "ui1" }
+      ]
     }
   }
 };

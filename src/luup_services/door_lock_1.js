@@ -2,114 +2,132 @@ module.exports = {
   serviceType: "door_lock_1",
   variables: {
     Target: {
+      name: "Target",
       dataType: "boolean",
       eventable: false
     },
     Status: {
+      name: "Status",
       dataType: "boolean",
       shortCode: "locked"
     },
     PinCodes: {
+      name: "PinCodes",
       dataType: "string",
       shortCode: "pincodes"
     },
     sl_UserCode: {
+      name: "sl_UserCode",
       dataType: "string"
     },
     sl_PinFailed: {
+      name: "sl_PinFailed",
       dataType: "boolean"
     },
     sl_CodeChanged: {
+      name: "sl_CodeChanged",
       dataType: "int"
     },
     sl_LockButton: {
+      name: "sl_LockButton",
       dataType: "boolean"
     },
     sl_LockFailure: {
+      name: "sl_LockFailure",
       dataType: "boolean"
     },
     sl_UnauthUser: {
+      name: "sl_UnauthUser",
       dataType: "string"
     },
     sl_PinProgramSuccess: {
+      name: "sl_PinProgramSuccess",
       dataType: "string"
     },
     sl_PinRemoveSuccess: {
+      name: "sl_PinRemoveSuccess",
       dataType: "string"
     },
     sl_PinProgramFail: {
+      name: "sl_PinProgramFail",
       dataType: "string"
     },
     sl_LockChanged: {
+      name: "sl_LockChanged",
       dataType: "string"
     },
     sl_LowBattery: {
+      name: "sl_LowBattery",
       dataType: "boolean"
     },
     sl_VeryLowBattery: {
+      name: "sl_VeryLowBattery",
       dataType: "boolean"
     },
     dateTime: {
+      name: "dateTime",
       dataType: "dateTime"
     },
     ui4: {
+      name: "ui4",
       dataType: "ui4"
     },
     ui1: {
+      name: "ui1",
       dataType: "ui1"
     }
   },
   actions: {
     SetTarget: {
-      in: {
-        newTargetValue: "Target"
-      }
+      in: [
+        { name: "newTargetValue", stateVar: "Target" }
+      ]
     },
     SetPin: {
-      out: {
-        json: "PinCodes",
-        UserCodeName: "sl_UserCode",
-        newPin: "sl_UserCode",
-        UserCode: "ui4"
-      }
+      out: [
+        { name: "json", stateVar: "PinCodes" },
+        { name: "UserCodeName", stateVar: "sl_UserCode" },
+        { name: "newPin", stateVar: "sl_UserCode" },
+        { name: "UserCode", stateVar: "ui4" }
+      ]
     },
     SetPinValidityDate: {
-      out: {
-        UserCode: "ui4",
-        StartDate: "dateTime",
-        StopDate: "dateTime",
-        Replace: "Target",
-        slotID: "ui4"
-      }
+      out: [
+        { name: "UserCode", stateVar: "ui4" },
+        { name: "StartDate", stateVar: "dateTime" },
+        { name: "StopDate", stateVar: "dateTime" },
+        { name: "Replace", stateVar: "Target" },
+        { name: "slotID", stateVar: "ui4" }
+      ]
     },
     SetPinValidityWeekly: {
-      out: {
-        UserCode: "ui4",
-        DayOfWeek: "ui4",
-        StartHour: "ui1",
-        StartMinute: "ui1",
-        StopHour: "ui1",
-        StopMinute: "ui1",
-        Replace: "Target",
-        slotID: "ui4"
-      }
+      out: [
+        { name: "UserCode", stateVar: "ui4" },
+        { name: "DayOfWeek", stateVar: "ui4" },
+        { name: "StartHour", stateVar: "ui1" },
+        { name: "StartMinute", stateVar: "ui1" },
+        { name: "StopHour", stateVar: "ui1" },
+        { name: "StopMinute", stateVar: "ui1" },
+        { name: "Replace", stateVar: "Target" },
+        { name: "slotID", stateVar: "ui4" }
+      ]
     },
     ClearPinValidity: {
-      in: {
-        UserCode: "ui4",
-        slotID: "ui4"
-      }
+      in: [
+        { name: "UserCode", stateVar: "ui4" },
+        { name: "slotID", stateVar: "ui4" }
+      ]
     },
     ClearPin: {
-      in: {
-        UserCode: "sl_UserCode"
-      }
+      in: [
+        { name: "UserCode", stateVar: "sl_UserCode" }
+      ]
     },
     RenamePin: {
-      in: {
-        UserCode: "sl_UserCode",
-        UserCodeName: "sl_UserCode"
-      }
+      in: [
+        { name: "UserCode", stateVar: "sl_UserCode" },
+        { name: "UserCodeName", stateVar: "sl_UserCode" }
+      ]
     }
   }
 };

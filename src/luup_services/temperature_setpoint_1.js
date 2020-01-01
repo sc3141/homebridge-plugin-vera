@@ -2,21 +2,25 @@ module.exports = {
   serviceType: "temperature_setpoint_1",
   variables: {
     Application: {
+      name: "Application",
       dataType: "string",
       eventable: true
     },
     CurrentSetpoint: {
+      name: "CurrentSetpoint",
       dataType: "i4",
       shortCode: "setpoint",
       eventable: true
     },
     SetpointAchieved: {
+      name: "SetpointAchieved",
       optional: true,
       dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     Name: {
+      name: "Name",
       optional: true,
       dataType: "string",
       defVal: "",
@@ -25,39 +29,39 @@ module.exports = {
   },
   actions: {
     GetApplication: {
-      out: {
-        CurrentApplication: "Application"
-      }
+      out: [
+        { name: "CurrentApplication", stateVar: "Application" }
+      ]
     },
     SetApplication: {
-      in: {
-        NewApplication: "Application"
-      }
+      in: [
+        { name: "NewApplication", stateVar: "Application" }
+      ]
     },
     SetCurrentSetpoint: {
-      in: {
-        NewCurrentSetpoint: "CurrentSetpoint"
-      }
+      in: [
+        { name: "NewCurrentSetpoint", stateVar: "CurrentSetpoint" }
+      ]
     },
     GetCurrentSetpoint: {
-      out: {
-        CurrentSP: "CurrentSetpoint"
-      }
+      out: [
+        { name: "CurrentSP", stateVar: "CurrentSetpoint" }
+      ]
     },
     GetSetpointAchieved: {
-      out: {
-        CurrentSPA: "SetpointAchieved"
-      }
+      out: [
+        { name: "CurrentSPA", stateVar: "SetpointAchieved" }
+      ]
     },
     GetName: {
-      out: {
-        CurrentName: "Name"
-      }
+      out: [
+        { name: "CurrentName", stateVar: "Name" }
+      ]
     },
     SetName: {
-      in: {
-        NewName: "Name"
-      }
+      in: [
+        { name: "NewName", stateVar: "Name" }
+      ]
     }
   }
 };

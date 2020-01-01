@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "alarm_partition_2",
   variables: {
     ArmMode: {
+      name: "ArmMode",
       dataType: "string",
       defVal: "Disarmed",
       values: [
@@ -11,6 +12,7 @@ module.exports = {
       shortCode: "armmode"
     },
     DetailedArmMode: {
+      name: "DetailedArmMode",
       dataType: "string",
       defVal: "Ready",
       values: [
@@ -32,6 +34,7 @@ module.exports = {
       shortCode: "detailedarmmode"
     },
     Alarm: {
+      name: "Alarm",
       dataType: "string",
       defVal: "None",
       values: [
@@ -41,54 +44,61 @@ module.exports = {
       shortCode: "alarm"
     },
     ChimeEnabled: {
+      name: "ChimeEnabled",
       dataType: "boolean",
       defVal: false,
       shortCode: "chimeenabled"
     },
     AlarmMemory: {
+      name: "AlarmMemory",
       dataType: "boolean",
       shortCode: "alarmmemory"
     },
     LastAlarmActive: {
+      name: "LastAlarmActive",
       dataType: "ui4",
       defVal: 0,
       shortCode: "lastalarmactive"
     },
     LastUser: {
+      name: "LastUser",
       dataType: "string",
       defVal: "",
       shortCode: "lastuser"
     },
     VendorStatus: {
+      name: "VendorStatus",
       dataType: "string",
       defVal: "",
       shortCode: "vendorstatus"
     },
     VendorStatusCode: {
+      name: "VendorStatusCode",
       dataType: "string",
       shortCode: "vendorstatuscode"
     },
     VendorStatusData: {
+      name: "VendorStatusData",
       dataType: "string",
       shortCode: "vendorstatusdata"
     }
   },
   actions: {
     RequestArmMode: {
-      in: {
-        State: "DetailedArmMode",
-        PINCode: "string"
-      }
+      in: [
+        { name: "State", stateVar: "DetailedArmMode" },
+        { name: "PINCode", stateVar: "string" }
+      ]
     },
     RequestQuickArmMode: {
-      in: {
-        State: "DetailedArmMode"
-      }
+      in: [
+        { name: "State", stateVar: "DetailedArmMode" }
+      ]
     },
     RequestPanicMode: {
-      in: {
-        State: "string"
-      }
+      in: [
+        { name: "State", stateVar: "string" }
+      ]
     }
   }
 };

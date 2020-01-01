@@ -2,6 +2,7 @@ module.exports = {
   serviceType: "dimming_1",
   variables: {
     LoadLevelTarget: {
+      name: "LoadLevelTarget",
       dataType: "ui1",
       defVal: 0,
       min: 0,
@@ -9,6 +10,7 @@ module.exports = {
       eventable: false
     },
     LoadLevelStatus: {
+      name: "LoadLevelStatus",
       dataType: "ui1",
       defVal: 0,
       min: 0,
@@ -17,6 +19,7 @@ module.exports = {
       eventable: true
     },
     MinLevel: {
+      name: "MinLevel",
       dataType: "ui1",
       defVal: 0,
       min: 0,
@@ -24,6 +27,7 @@ module.exports = {
       eventable: false
     },
     OnEffectLevel: {
+      name: "OnEffectLevel",
       optional: true,
       dataType: "ui1",
       defVal: 100,
@@ -32,6 +36,7 @@ module.exports = {
       eventable: false
     },
     OnEffect: {
+      name: "OnEffect",
       optional: true,
       dataType: "string",
       defVal: "Default",
@@ -43,11 +48,13 @@ module.exports = {
       eventable: false
     },
     ValidOutputValues: {
+      name: "ValidOutputValues",
       optional: true,
       dataType: "string",
       eventable: false
     },
     StepDelta: {
+      name: "StepDelta",
       optional: true,
       dataType: "ui1",
       defVal: 0,
@@ -56,6 +63,7 @@ module.exports = {
       eventable: true
     },
     RampRate: {
+      name: "RampRate",
       optional: true,
       dataType: "ui1",
       defVal: 0,
@@ -64,6 +72,7 @@ module.exports = {
       eventable: true
     },
     RampTime: {
+      name: "RampTime",
       optional: true,
       dataType: "ui4",
       defVal: 0,
@@ -72,23 +81,27 @@ module.exports = {
       eventable: false
     },
     IsRamping: {
+      name: "IsRamping",
       optional: true,
       dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     RampPaused: {
+      name: "RampPaused",
       optional: true,
       dataType: "boolean",
       defVal: 0,
       eventable: true
     },
     TurnOnBeforeDim: {
+      name: "TurnOnBeforeDim",
       optional: true,
       dataType: "boolean",
       defVal: 1
     },
     AllowZeroLevel: {
+      name: "AllowZeroLevel",
       optional: true,
       dataType: "boolean",
       defVal: 0
@@ -96,35 +109,35 @@ module.exports = {
   },
   actions: {
     SetLoadLevelTarget: {
-      in: {
-        newLoadlevelTarget: "LoadLevelTarget"
-      }
+      in: [
+        { name: "newLoadlevelTarget", stateVar: "LoadLevelTarget" }
+      ]
     },
     GetLoadLevelTarget: {
-      out: {
-        GetLoadlevelTarget: "LoadLevelTarget"
-      }
+      out: [
+        { name: "GetLoadlevelTarget", stateVar: "LoadLevelTarget" }
+      ]
     },
     GetLoadLevelStatus: {
-      out: {
-        retLoadlevelStatus: "LoadLevelStatus"
-      }
+      out: [
+        { name: "retLoadlevelStatus", stateVar: "LoadLevelStatus" }
+      ]
     },
     SetOnEffectLevel: {
-      in: {
-        newOnEffectLevel: "OnEffectLevel"
-      }
+      in: [
+        { name: "newOnEffectLevel", stateVar: "OnEffectLevel" }
+      ]
     },
     SetOnEffect: {
-      in: {
-        newOnEffect: "OnEffect"
-      }
+      in: [
+        { name: "newOnEffect", stateVar: "OnEffect" }
+      ]
     },
     GetOnEffectParameters: {
-      out: {
-        retOnEffect: "OnEffect",
-        retOnEffectLevel: "OnEffectLevel"
-      }
+      out: [
+        { name: "retOnEffect", stateVar: "OnEffect" },
+        { name: "retOnEffectLevel", stateVar: "OnEffectLevel" }
+      ]
     },
     StepUp: {},
     StepDown: {},
@@ -132,47 +145,47 @@ module.exports = {
     StartRampDown: {},
     StopRamp: {},
     StartRampToLevel: {
-      in: {
-        newLoadLevelTarget: "LoadLevelTarget",
-        newRampTime: "RampTime"
-      }
+      in: [
+        { name: "newLoadLevelTarget", stateVar: "LoadLevelTarget" },
+        { name: "newRampTime", stateVar: "RampTime" }
+      ]
     },
     SetStepDelta: {
-      in: {
-        newStepDelta: "StepDelta"
-      }
+      in: [
+        { name: "newStepDelta", stateVar: "StepDelta" }
+      ]
     },
     GetStepDelta: {
-      out: {
-        retStepDelta: "StepDelta"
-      }
+      out: [
+        { name: "retStepDelta", stateVar: "StepDelta" }
+      ]
     },
     SetRampRate: {
-      in: {
-        newRampRate: "RampRate"
-      }
+      in: [
+        { name: "newRampRate", stateVar: "RampRate" }
+      ]
     },
     GetRampRate: {
-      out: {
-        retRampRate: "RampRate"
-      }
+      out: [
+        { name: "retRampRate", stateVar: "RampRate" }
+      ]
     },
     PauseRamp: {},
     ResumeRamp: {},
     GetIsRamping: {
-      out: {
-        retIsRamping: "IsRamping"
-      }
+      out: [
+        { name: "retIsRamping", stateVar: "IsRamping" }
+      ]
     },
     GetRampPaused: {
-      out: {
-        retRampPaused: "RampPaused"
-      }
+      out: [
+        { name: "retRampPaused", stateVar: "RampPaused" }
+      ]
     },
     GetRampTime: {
-      out: {
-        retRampTime: "RampTime"
-      }
+      out: [
+        { name: "retRampTime", stateVar: "RampTime" }
+      ]
     }
   }
 };
