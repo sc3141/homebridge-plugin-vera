@@ -1,4 +1,4 @@
-var on_off = require('../luup_conversions/on_off');
+var bool = require('../luup_conversions/bool');
 
 module.exports = {
   category: "LIGHTBULB",
@@ -11,7 +11,7 @@ module.exports = {
         Lightbulb: {
           On: {
             action: "SetTarget",
-            conversion: on_off
+            stateVar: "Status",
           }
         }
       }
