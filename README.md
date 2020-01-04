@@ -5,8 +5,8 @@ This will be primarily based off of the excellent @tonesto7 homebridge-smartthin
 This is a _work-in-progress_. The motivation, in part, regards education regarding modern Javascript programming constructs such as classes, promises, arrow functions. 
 The other part of motivation regards my ownership of two Veralite controllers, and the current lack of Vera support for HomeKit. 
 
-Update 2020-01-04: Recently, I've used the Vera iOS app a good deal while testing the plugin. I really like Vera's app alot, 
-and it is my preferred app for the purpose of controlling it's attached zwave devices.  Considering my ownership of 2 
+*_Update 2020-01-04_*: Recently, I've used the Vera iOS app a good deal while testing the plugin. I really like Vera's app alot, 
+and it is my preferred app for the purpose of controlling it's attached zwave devices.  Considering my ownership of two 
 Veralite controllers, there are aren't many other choices :), but the app is great.  I only wish that I could control 
 all my home automation devices from my AppleTV 4K.
 
