@@ -235,33 +235,44 @@ module.exports = class DeviceTypes {
   }
 
   bindGet(accessoryChar, devData, connectSpec) {
+    accessoryChar.on('get', this.createGetter(accessoryChar.props.format, devData, connectSpec));
+  }
+
+  bindSet(accessoryChar, devData, connectSpec) {
+    if (connectSpec.changeOnly)
+      accessoryChar.on('set', this.createChangeOnlySetter(accessoryChar.props.format, devData, connectSpec));
+    else
+      accessoryChar.on('set', this.createSetter(accessoryChar.props.format, devData, connectSpec));
+  }
+
+  createGetter(hkFormat, devData, connectSpec) {
     let convert = _.get(connectSpec, 'conversion.get');
     if (convert === undefined) {
       let veraType = connectSpec.stateVarDef.dataType;
-      convert = _.get(this.conversions.between(accessoryChar.props.format, veraType), 'get');
+      convert = _.get(this.conversions.between(hkFormat, veraType), 'get');
     }
 
     // at this point, convert may still be undefined ... (and a normal condition)
-    accessoryChar.on('get', (callback) => {
+    return (callback) => {
       this.client.getStateVariable(
         callback,
         devData.deviceid,
         connectSpec.veraServiceId,
         connectSpec.stateVarDef.name,
         convert);
-    });
+    };
   }
 
-  bindSet(accessoryChar, devData, connectSpec) {
+  createSetter(hkFormat, devData, connectSpec) {
     let convert = _.get(connectSpec, 'conversion.set');
     if (convert === undefined) {
       // use the data type of the first argument, if any
       let veraType = _.get(connectSpec.actionDef, 'in.0.stateVarDef.dataType');
-      convert = _.get(this.conversions.between(accessoryChar.props.format, veraType),'set');
+      convert = _.get(this.conversions.between(hkFormat, veraType),'set');
     }
 
     // at this point, convert may still be undefined ... (and a normal condition)
-    accessoryChar.on('set', (value, callback) => {
+    return (value, callback) => {
       this.client.sendAction(
         callback,
         devData.deviceid,
@@ -270,6 +281,20 @@ module.exports = class DeviceTypes {
         _.get(connectSpec.actionDef, 'in.0.name'),
         value,
         convert);
-    });
+    }
+  }
+
+  createChangeOnlySetter(hkFormat, devData, connectSpec) {
+    let getter = this.createGetter(hkFormat, devData, connectSpec);
+    let setter = this.createSetter(hkFormat, devData, connectSpec);
+
+    return (value, callback) => {
+      getter((unused, gotten) => {
+        if (gotten === value)
+          callback(undefined);
+        else
+          setter(value, callback);
+      });
+    };
   }
 };

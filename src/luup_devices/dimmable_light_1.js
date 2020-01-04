@@ -10,8 +10,9 @@ module.exports = {
       connect: {
         Lightbulb: {
           On: {
+            changeOnly: true,
             action: "SetTarget",
-            stateVar: "Status",
+            stateVar: "Status"
           }
         }
       }
