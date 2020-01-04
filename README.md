@@ -21,7 +21,7 @@ It seems that HomeKit chooses to set the state of the characteristic, _On_, duri
 various homebridge plugins have found workarounds, but these appear for the most part to involve the unsatisfying use of
 delays to alter the timing of set requests between _On_ and other characteristics.  I have not tested color light bulbs, 
 and the problem may extend to more than just the two aforementioned characteristics.  The topic is discussed in more 
-detail in (this github issue)[https://github.com/nfarina/homebridge/issues/807].  
+detail in [this github issue](https://github.com/nfarina/homebridge/issues/807).  
 
 To address the brightness idiosyncrasy, I have implemented a _tentative_ solution which avoids the use of delays.  Instead,
 if specified in a 'device file' (e.g. src/luup_devices/dimmable_light_1.js), the property _changeOnly_ causes the plugin
