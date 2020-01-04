@@ -75,7 +75,8 @@ processActions = function(json, indent) {
     let actions = [];
     for(let name of Object.keys(json.actions)) {
       let actionDef = json.actions[name];
-      let actString = `${indent}  ${name}: {`;
+      let unquotedName = name.replace(/^[0-9]/g, '_$&').replace(/\//g, '_or_');
+      let actString = `${indent}  ${unquotedName}: {`;
       if (actionDef.hasOwnProperty('args')) {
         let directions = [];
         processArgs(directions, 'in', actionDef);
