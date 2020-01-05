@@ -3,10 +3,26 @@ module.exports = {
   upnpType: "urn:schemas-upnp-org:device:DimmableRGBLight:2",
   services: {
     "urn:upnp-org:serviceId:SwitchPower1": {
-      api: require('../luup_services/switch_power_1')
+      api: require('../luup_services/switch_power_1'),
+      connect: {
+        Lightbulb: {
+          On: {
+            changeOnly: true,
+            action: "SetTarget",
+            stateVar: "Status"
+          }
+        }
+      }
     },
     "urn:upnp-org:serviceId:Dimming1": {
-      api: require('../luup_services/dimming_1')
+      api: require('../luup_services/dimming_1'),
+      connect: {
+        Lightbulb: {
+          Brightness: {
+            action: "SetLoadLevelTarget"
+          }
+        }
+      }
     },
     "urn:micasaverde-com:serviceId:EnergyMetering1": {
       api: require('../luup_services/energy_metering_1')

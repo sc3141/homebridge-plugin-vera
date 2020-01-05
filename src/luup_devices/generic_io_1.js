@@ -6,7 +6,15 @@ module.exports = {
       api: require('../luup_services/ha_device_1')
     },
     "urn:upnp-org:serviceId:SwitchPower1": {
-      api: require('../luup_services/switch_power_1')
+      api: require('../luup_services/switch_power_1'),
+      connect: {
+        Switch: {
+          On: {
+            action: "SetTarget",
+            stateVar: "Status"
+          }
+        }
+      }
     }
   }
 };
