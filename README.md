@@ -41,12 +41,6 @@ with the controller regarding an individual bridged accessory (i.e. device) woul
 to await confirmation of the completion of each outstanding command.
 
 
-## Goals
-
-- Improve my modern Javascript skills.
-- Understand the Vera API
-- Allow reasonably complete control of Veralite via the Apple Home app.
-
 ## Credits
 
 I would like to acknowledge, in addition to @tonesto7, those whom he found helpful ...
@@ -59,3 +53,63 @@ I would like to acknowledge, in addition to @tonesto7, those whom he found helpf
 ... As well as those with knowledge regarding the Vera UI7 API:
 
 * @Be2daErtin [homebridge-bvera](https://github.com/Be2daErtin/homebridge-bvera)
+
+
+## Installation:
+
+ 1. Install homebridge using: ```npm i -g homebridge``` (For Homebridge Install: [Homebridge Instructions](https://github.com/nfarina/homebridge/blob/master/README.md))
+ 2. Update your configuration file. See sample config.json snippet below.  This plugin requires that your Vera controller be assigned a static IP address.  The pluging cannot discover the address.
+
+  <h3 style="padding: 0em .6em;">Config.json Settings Example</h3>
+
+  <h4 style="padding: 0em .6em; margin-bottom: 5px;"><u>Example of all settings. Not all settings are required. Read the breakdown below</u></h4>
+
+```
+      "platform": "VeraController",
+      "name": "Veralite",
+      "controller_ip": "192.168.1.xxx", 
+      "excluded_vera_device_types": [
+        "urn:schemas-micasaverde-com:device:ZWaveNetwork"
+      ],
+      "logConfig": {
+         "debug": false,
+         "showChanges": true,
+         "hideTimestamp": false,
+         "hideNamePrefix": false,
+         "file": {
+            "enabled": true,
+            "level": "good"
+         }
+      }
+```
+
+
+ * <p><u>platform</u> & <u>name</u>  <small style="color: orange; font-weight: 600;"><i>Required</i></small><br>
+    This information is used by homebridge to identify the plugin and should be the settings above.</p>
+
+ * <p><u>controller_ip</u>  <small style="color: #f92672; font-weight: 600;"><i>Required</i></small>
+   The plugin is not capable of discovery of Vera controllers.  Therefore it is best to assign a static IP address to the target controller and specify the address here.
+    
+ * <p><u>excluded_vera_device_types</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `[]` (None)</i></small><br>
+   The plugin excludes those Vera devices types which, in the HomeKit context, do not map well to a HomeKit accessory.  In the case of incompatibility in an installation, devices may be excluded by the specification of their corresponding UPNP type here.  
+   
+ * <p>
+   <u>logConfig</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small><br>
+   Define log output format options as well as enable the log file output
+
+   - <u>debug</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `false`</i></small><br>Enables Debug log output
+
+   - <u>hideTimestamp</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `false`</i></small><br>Hides timestamp prefix from console log output
+
+   - <u>hideNamePrefix</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `false`</i></small><br>Hides plugin name prefix (e.g. `[Veralite]`) from console log output
+
+   - <u>file</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small><br>
+      Enable log file output and configure options
+
+     - <u>enabled</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `false`</i></small><br>
+      Activates logging to file (homebridge-plugin-vera.log) stored in the same folder as the homebridge config.json
+
+     - <u>level</u><small style="color: #f92672; font-weight: 600;"><i> Optional</i></small> | <small style="color: green; font-weight: 600;"><i>Default: `good`</i></small><br>
+     Defines the log entry levels that are written to the file. `good`(recommended) is the default which will write all necessary entries.
+   </p>
+
