@@ -1,0 +1,153 @@
+{
+   "$id": "/config.schema.json",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "description": "configuration for homebridge plugin, homebridge-plugin-vera",
+   "type": "object",
+    "required": [
+        "name",
+        "controller_ip"
+    ],
+   "properties": {
+       "name": {
+           "title": "Name",
+           "description": "This should default to VeraController",
+           "type": "string",
+           "default": "VeraController"
+       },
+       "controller_ip": {
+           "title": "Controller IP",
+           "description": "The IP address of your Vera controller.",
+           "type": "string"
+       },
+       "excluded_vera_device_types": {
+           "title": "Excluded UPNP Device Types",
+           "description": "list of universal resource names (URN) which identify device types to exclude from bridge",
+           "type": "array",
+           "items": {
+               "type": "string",
+               "pattern": "urn:[a-z0-9_-]+(:device:[A-z]+)?"
+           },
+           "default": []
+       },
+       "excluded_vera_services": {
+           "title": "Excluded Services Per Device",
+           "description": "map of devices for which specific services (identfied by URN) should not activated for use via HomeKit",
+           "type": "object",
+           "patternProperties": {
+               "^[0-9]+": {
+                   "title": "Device Service Exclusions",
+                   "description": "entry in map for a specific device which identifies the services to be excluded",
+                   "type": "array",
+                   "items": {
+                       "type": "string",
+                       "pattern": "urn(:[a-z0-9_-]+)+:serviceId:[A-z0-9]+"
+                   }
+               }
+
+           },
+           "default": {}
+       },
+       "temperature_unit": {
+           "title": "Define Temperature Unit",
+           "type": "string",
+           "default": "F",
+           "oneOf": [
+               {
+                   "title": "Fahrenheit",
+                   "enum": [
+                       "F"
+                   ]
+               },
+               {
+                   "title": "Celsius",
+                   "enum": [
+                       "C"
+                   ]
+               }
+           ]
+       },
+       "logConfig": {
+           "type": "object",
+           "properties": {
+               "debug": {
+                   "title": "Enable Debug logging?",
+                   "description": "This will show just about every log output available.",
+                   "type": "boolean",
+                   "default": false
+               },
+               "showChanges": {
+                   "title": "Show Device Events in the Logs?",
+                   "description": "This will log device event changes.",
+                   "type": "boolean",
+                   "default": true
+               },
+               "hideTimestamp": {
+                   "title": "Hide TimeStamp Prefix inLogs?",
+                   "description": "This will remove the prefix from all console log output.",
+                   "type": "boolean",
+                   "default": true
+               },
+               "hideNamePrefix": {
+                   "title": "Hide Plugin Name Prefix in Logs?",
+                   "description": "This will remove the prefix from all console log output.",
+                   "type": "boolean",
+                   "default": true
+               },
+               "file": {
+                   "type": "object",
+                   "properties": {
+                       "enabled": {
+                           "title": "Enable Logging to file",
+                           "description": "This log will be created as homebridge-plugin-vera.log in the same folder as this config.json file.",
+                           "type": "boolean",
+                           "default": true
+                       },
+                       "level": {
+                           "title": "Log File Output Level",
+                           "type": "string",
+                           "default": "good",
+                           "oneOf": [
+                               {
+                                   "title": "Debug",
+                                   "enum": [
+                                       "debug"
+                                   ]
+                               },
+                               {
+                                   "title": "Good",
+                                   "enum": [
+                                       "good"
+                                   ]
+                               },
+                               {
+                                   "title": "Notice",
+                                   "enum": [
+                                       "pink"
+                                   ]
+                               },
+                               {
+                                   "title": "Alert",
+                                   "enum": [
+                                       "alert"
+                                   ]
+                               },
+                               {
+                                   "title": "Warnings",
+                                   "enum": [
+                                       "warn"
+                                   ]
+                               },
+                               {
+                                   "title": "Errors",
+                                   "enum": [
+                                       "error"
+                                   ]
+                               }
+                           ]
+                       }
+                   }
+               }
+           }
+       }
+   }
+}
