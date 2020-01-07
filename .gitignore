@@ -1,0 +1,63 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+#
+# logging artifacts
+#
+**/log/*
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#
+# runtime artifacts
+#
+pids
+*.pid
+*.seed
+*.pid.lock
+
+#
+# deployment artifacts
+#
+
+# homebridge
+config.json
+persist
+accessories
+
+# node
+**/node_modules/*
+
+# jspm
+**/jspm_packages/*
+
+# npm-cache
+.npm
+
+#
+# os artifacts
+#
+
+# mac osx
+**/.DS_Store
+
+#
+# dev tool artifacts
+#
+
+# git
+commit.txt
+
+# 'scratch' files
+/scratch/*
+
+# intellij/webstorm
+/.idea
+
+# code-oss
+/*.code-workspace
+
+# eslint
+.eslintcache
