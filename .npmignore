@@ -9,4 +9,7 @@ scripts
 .esformatter
 .eslintrc.json
 prettierrc
+.idea
 
+scratch
+commit.txt
