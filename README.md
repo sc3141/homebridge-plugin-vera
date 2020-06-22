@@ -1,18 +1,33 @@
 # homebridge-plugin-vera
 
+Server side [Homebridge](https://github.com/homebridge/homebridge) plugin. This plugin allows 'foreign' automation controllers to be accessed in [HomeKit](https://developer.apple.com/homekit/) [applications](https://www.apple.com/ios/home/) 
+via [Homebridge](https://github.com/homebridge/homebridge).  [Homebridge](https://github.com/homebridge/homebridge) is built upon [HAP-nodejs](https://github.com/homebridge/HAP-NodeJS), and as such, is a server-side node application.
+
 This will be primarily based off of the excellent @tonesto7 homebridge-smartthings-v2.
 
-This is a _work-in-progress_. The motivation, in part, regards education regarding modern Javascript programming constructs such as classes, promises, arrow functions. 
+This is a _work-in-progress_. The motivation, in part, regards education regarding modern Javascript programming constructs such as classes, promises, arrow functions, etc. 
 The other part of motivation regards my ownership of two Veralite controllers, and the current lack of Vera support for HomeKit. 
+
+The first cut at the plugin has now been pushed to develop.  The only supported device is the dimmable light, 
+as those are the kinds of devices I have installed in my home. The framework is now in place, however, 
+to expand the number of supported devices. 
 
 **_Update 2020-01-04_**: Recently, I've used the Vera iOS app a good deal while testing the plugin. I really like Vera's app alot, 
 and it is my preferred app for the purpose of controlling it's attached zwave devices.  Considering my ownership of two 
 Veralite controllers, there are aren't many other choices :), but the app is great.  I only wish that I could control 
 all my home automation devices from my AppleTV 4K.
 
-The first cut at the plugin has now been pushed to develop.  The only supported device is the dimmable light, 
-as those are the kinds of devices I have installed in my home. The framework is now in place, however, 
-to expand the number of supported devices. 
+**_Update 2020-06-21_**: I'm in the final testing stages release 0-0-5. It adds control for color bulbs.
+
+## Home App Screenshots of Served Devices
+
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/home_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/hubs_and_bridges_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/homebridge_bridge_devices_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/foyer_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/sitting_room_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/great_room_screen.png?raw=true"></img>
+<img width="20%" src="https://github.com/sc3141/homebridge-plugin-vera/blob/readme-assets/cabinets_screen.png?raw=true"></img>
 
 ## Issues
 
