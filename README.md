@@ -17,7 +17,7 @@ and it is my preferred app for the purpose of controlling it's attached zwave de
 Veralite controllers, there are aren't many other choices :), but the app is great.  I only wish that I could control 
 all my home automation devices from my AppleTV 4K.
 
-**_Update 2020-06-21_**: I'm in the final testing stages release 0-0-5. It adds control for color bulbs.
+**_Update 2020-06-21_**: I'm in the final testing stages release 0-0-5. It improves the smoothness of dimming sliders by more efficient responses to change brightness.  It also adds control for color bulbs.
 
 ## Home App Screenshots of Served Devices
 
